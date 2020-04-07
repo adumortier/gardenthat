@@ -2,14 +2,14 @@ language:
   - ruby
 rvm:
   - 2.4.1
-env:
-  - DB=postgresql
+addons:
+  postgresql: 9.6
+dist: trusty
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
+  - rm -r spec/cassettes
 script:
-  - bundle exec rails db:create
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
-  - bundle exec rspec
+- bundle exec rails db:{create,migrate,seed}
+- bundle exec rspec
 services:
   - postgresql
