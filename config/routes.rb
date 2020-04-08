@@ -1,6 +1,8 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
-  get '/', to: 'welcome#index'
+Rails.application.routes.draw do
+  root 'welcome#index'
+  get '/about', to: 'about#show'
   get 'auth/:provider/callback', to: 'sessions#googleAuth'
   get 'auth/failure', to: redirect('/')
 end
