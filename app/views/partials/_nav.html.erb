@@ -1,0 +1,21 @@
+<nav class="primary_nav">
+  <section class="left inner-nav table">
+    <div class="home align-middle table-cell">
+      <%= link_to "Home", '/' %>
+    </div>
+  </section>
+
+  <section class="right links overflow-auto table mr4">
+
+      <div class="align-middle table-cell p3">
+        <%= link_to "About", about_path %>
+      </div>
+      <div class="align-middle table-cell p3">
+        <%= link_to "Register", register_path %>
+      </div>
+      <div class="align-middle table-cell p3">
+        <%= link_to 'Login', login_path, class: "px2"%>
+        <%= link_to 'Sign Out', logout_path, method: :delete %>
+      </div>
+  </section>
+</nav>
