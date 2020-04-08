@@ -6,7 +6,7 @@ RSpec.describe "about show page", type: :feature do
     visit '/'
 
     click_link 'About'
-    
+  
     expect(page).to have_content("About Gard(in) That")
     expect(page).to have_content("How To Use This Site")
     expect(page).to have_link("Trefle")
