@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
 class SessionsController < ApplicationController
+
+  def new 
+    
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_path
+  end
+
   def googleAuth
     access_token = request.env['omniauth.auth']
     user = User.from_omniauth(access_token)
@@ -14,9 +24,4 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  def destroy
-    session[:user_id] = nil
-    redirect_to root_path
-  end
-  
 end
