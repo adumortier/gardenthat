@@ -14,8 +14,8 @@
         <%= link_to "Register", register_path %>
       </div>
       <div class="align-middle table-cell p3">
-        <%= link_to 'Login', login_path, class: "px2"%>
-        <%= link_to 'Sign Out', logout_path, method: :delete %>
+        <%= link_to 'Login', '/auth/google_oauth2', class: "px2"%>
+        <%= link_to 'Sign Out', '/', method: :delete %>
       </div>
   </section>
 </nav>
