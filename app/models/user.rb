@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   validates_presence_of :name, :email, :google_token
+  validates :email, uniqueness: true
   
   def self.from_omniauth(auth)
     where(email: auth["info"]["email"]).first_or_initialize do |user|
