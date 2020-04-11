@@ -23,7 +23,6 @@ RSpec.describe "As a registered user " , type: :feature do
 
       expect(current_path).to eq('/search')
       
-      save_and_open_page
       within('.plant_info') do
         expect(first('.name').text).to_not be_empty
          expect(page).to have_css("img[src*='https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/5dc3618ef2c1020004f936e4.jpg?1573085580']")
