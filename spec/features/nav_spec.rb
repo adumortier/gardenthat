@@ -8,15 +8,9 @@ describe 'vister' do
 		expect(current_path).to eq('/about')
 	end
 
-	it 'register' do
-		visit '/'
-		click_on 'Register'
-		expect(current_path).to eq('/register')
-	end
-
 	it 'login' do
 		visit '/'
-		click_on 'Login'
+		click_on 'Sign In'
 		expect(current_path).to eq('/login')	
 	end
 
