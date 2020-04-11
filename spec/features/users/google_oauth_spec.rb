@@ -28,7 +28,7 @@ describe 'As a registered user' do
         user1 = User.create!(user1_params)
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
         visit '/login'
-        click_on 'Login with Google'
+        click_on 'Sign in with Google'
         expect(user1.google_token).to eq("temp")
     end
 
@@ -37,7 +37,7 @@ describe 'As a registered user' do
         user1 = User.create!(user1_params)
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
         visit '/login'
-        click_on 'Login with Google'
+        click_on 'Sign in with Google'
         expect(current_path).to eq('/profile/questionaire')
         fill_in :zip_code, with: '02139'
         click_on 'Send'
