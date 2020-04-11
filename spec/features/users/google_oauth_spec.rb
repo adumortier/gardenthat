@@ -23,34 +23,33 @@ describe 'As a registered user' do
         OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(@auth)
       end
 
-    it 'it lets me sign in through google' do
-        user1_params = { email: 'gardenthat@gmail.com', name: 'gardenthat', zip_code: '02300', google_token: 'temp', google_refresh_token: 'temp' }
-        user1 = User.create!(user1_params)
-        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
-        visit '/login'
-        click_on 'Sign in with Google'
-        expect(user1.google_token).to eq("temp")
-    end
-
-    it "it redirects me to the questionaire if I don't have a zip code stored" do
-        user1_params = { email: 'gardenthat@gmail.com', name: 'gardenthat', google_token: 'temp', google_refresh_token: 'temp' }
-        user1 = User.create!(user1_params)
-        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
-        visit '/login'
-        click_on 'Sign in with Google'
-        expect(current_path).to eq('/profile/questionaire')
-        fill_in :zip_code, with: '02139'
-        click_on 'Send'
-        expect(current_path).to eq('/')
-        expect(user1.zip_code).to eq('02139')
-    end
-
-
-    it 'it creates a new user with an oauth hash returned' do
+    it 'it starts creating a new user with an oauth hash returned' do
       user = User.from_omniauth(@auth)
       expect(user.email).to eq("gardenthat@gmail.com")
       expect(user.name).to eq("gardenthat")
     end
+
+    it 'it lets me sign in through google and redirects me to the welcome page only if I dont have a zip code stored' do
+        visit '/'
+        click_on 'Sign In'
+        expect(current_path).to eq('/login')
+        click_on 'Sign in with Google'
+        expect(User.last.zip_code.nil?).to eq(true)
+        expect(current_path).to eq('/profile/questionaire')
+        fill_in :zip_code, with: '02139'
+        click_on 'Send'
+        expect(current_path).to eq('/')
+        expect(User.last.zip_code).to eq('02139')
+        expect(page).to_not have_link('Sign in')
+        visit '/login'
+        expect(page).to have_content("The page you were looking for doesn't exist.")
+        click_on 'Sign Out'
+        expect(current_path).to eq('/')
+        visit '/login'
+        click_on 'Sign in with Google'
+        expect(current_path).to eq('/')
+    end
+    
 end
 
 
