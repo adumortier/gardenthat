@@ -30,24 +30,24 @@ describe 'As a registered user' do
     end
 
     it 'it lets me sign in through google and redirects me to the welcome page only if I dont have a zip code stored' do
-        visit '/'
-        click_on 'Sign In'
-        expect(current_path).to eq('/login')
-        click_on 'Sign in with Google'
-        expect(User.last.zip_code.nil?).to eq(true)
-        expect(current_path).to eq('/profile/questionaire')
-        fill_in :zip_code, with: '02139'
-        click_on 'Send'
-        expect(current_path).to eq('/')
-        expect(User.last.zip_code).to eq('02139')
-        expect(page).to_not have_link('Sign in')
-        visit '/login'
-        expect(page).to have_content("The page you were looking for doesn't exist.")
-        click_on 'Sign Out'
-        expect(current_path).to eq('/')
-        visit '/login'
-        click_on 'Sign in with Google'
-        expect(current_path).to eq('/')
+      visit '/'
+      click_on 'Sign In'
+      expect(current_path).to eq('/login')
+      click_on 'Sign in with Google'
+      expect(User.last.zip_code.nil?).to eq(true)
+      expect(current_path).to eq('/profile/questionaire')
+      fill_in :zip_code, with: '02139'
+      click_on 'Send'
+      expect(current_path).to eq('/')
+      expect(User.last.zip_code).to eq('02139')
+      expect(page).to_not have_link('Sign in')
+      visit '/login'
+      expect(page).to have_content("The page you were looking for doesn't exist.")
+      click_on 'Sign Out'
+      expect(current_path).to eq('/')
+      visit '/login'
+      click_on 'Sign in with Google'
+      expect(current_path).to eq('/')
     end
     
 end
