@@ -11,8 +11,12 @@
         <%= link_to "About", about_path %>
       </div>
       <div class="align-middle table-cell p3">
-        <%= link_to 'Sign In', '/login', class: "px2"%>
+      <% if current_user %>
+        <%= link_to 'My Garden', '/mygarden'%>
         <%= link_to 'Sign Out', '/logout', method: :delete %>
+      <% else %>
+        <%= link_to 'Sign In', '/login', class: "px2"%>
+      <% end %>
       </div>
   </section>
 </nav>
