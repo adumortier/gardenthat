@@ -17,11 +17,8 @@ class SessionsController < ApplicationController
     user.google_refresh_token = refresh_token if refresh_token.present?
     user.save
     log_in(user)
-    if user.zip_code.nil?
-      redirect_to profile_questionaire_path
-    else
-      redirect_to root_path
-    end
+    return redirect_to profile_questionaire_path if user.zip_code.nil?
+    redirect_to root_path
   end
 
 end
