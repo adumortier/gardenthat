@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get '/about', to: 'about#show'
   
-  get '/login', to: 'sessions#new'
+  get '/login', to: 'visitors/sessions#new'
+  
   delete '/logout', to: 'sessions#destroy'
   
   get '/auth/:provider/callback', to: 'sessions#googleAuth'
