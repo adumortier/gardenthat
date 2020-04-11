@@ -1,0 +1,7 @@
+
+<h3>Tell us more about you! </h3>
+<%= form_with(url: "/profile", method: "post", local: true) do %>
+  <%= label_tag(:zip_code, "Please enter your zip code:") %>
+  <%= text_field_tag(:zip_code) %>
+  <%= submit_tag("Send") %>
+<% end %>
