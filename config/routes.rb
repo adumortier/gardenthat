@@ -16,4 +16,8 @@ Rails.application.routes.draw do
 
   get '/profile/questionaire', to: 'profiles#new'
   post '/profile', to: 'profiles#create'
+
+	namespace :user do
+		get '/mygardens', to: 'mygardens#index'
+	end
 end

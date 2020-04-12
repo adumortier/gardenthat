@@ -16,7 +16,7 @@
         <%= submit_tag("Search") %>
       <% end %>
       <% if current_user %>
-        <%= link_to 'My Garden', '/mygarden'%>
+        <%= link_to 'My Garden', 'user/mygardens'%>
         <%= link_to 'Sign Out', '/logout', method: :delete %>
       <% else %>
         <%= link_to 'Sign In', '/login', class: "px2"%>
