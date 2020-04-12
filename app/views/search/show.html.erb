@@ -1,0 +1,13 @@
+<section class='plant_details'>
+  <h2>Name: <%=  @plant.name.capitalize %> </h2>
+  <%= image_tag(@plant.image, height:'300', width: '400') %>
+  <p>Perennial: <%=  @plant.perennial %> </p>
+  <p>Time to First Harvest: <%=  @plant.first_harvest %></p>
+  <p>Time to Last Harvest: <%=  @plant.last_harvest %></p>
+  <p>Description: <%=  @plant.description %></p>
+  <p>Amount of Sun: <%=  @plant.sun %></p>
+  <p>Average Height: <%=  @plant.height %> cm </p>
+  <p>Average Spread: <%=  @plant.spread %> cm </p>
+  <p>How to Sow: <%=  @plant.sowing %> </p>
+  <p>Average Spacing <%=  @plant.spacing %> </p>
+</section>

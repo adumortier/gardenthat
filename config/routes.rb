@@ -3,13 +3,14 @@
 Rails.application.routes.draw do
   root 'welcome#index'
   get '/about', to: 'about#show'
-  
+
   get '/login', to: 'visitors/sessions#new'
 
   get '/search', to: 'search#index'
+  get '/search/details', to: 'search#show'
 
   delete '/logout', to: 'sessions#destroy'
-  
+
   get '/auth/:provider/callback', to: 'sessions#googleAuth'
   get '/auth/failure', to: redirect('/')
 
