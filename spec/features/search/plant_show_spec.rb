@@ -20,6 +20,8 @@ RSpec.describe "Plant Search Page" , type: :feature do
         click_on 'Tomato'
       end
 
+      expect(current_path).to eq('/search/details.tomato')
+
       within('.plant_details') do
         expect(page).to have_content('tomato')
         expect(page).to have_content('false')
