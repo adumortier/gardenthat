@@ -1,26 +1,20 @@
 <nav class="primary_nav">
-  <section class="left inner-nav table">
-    <div class="home align-middle table-cell">
-      <%= link_to "Home", '/' %>
-    </div>
-  </section>
-
-  <section class="right links overflow-auto table mr4">
-
-      <div class="align-middle table-cell p3">
-        <%= link_to "About", about_path %>
-      </div>
-      <div class="align-middle table-cell p3">
-      <%= form_with(url: "/search", method: "get", local: true) do %>
+  <ul>
+    <div class="navbar navbar-light bg-light">
+    <li>
+        <%= form_with(url: "/search", method: "get", local: true) do %>
         <%= text_field_tag(:search) %>
         <%= submit_tag("Search") %>
-      <% end %>
-      <% if current_user %>
-        <%= link_to 'My Garden', '/mygarden'%>
-        <%= link_to 'Sign Out', '/logout', method: :delete %>
+        <% end %>
+    </li>
+    <li><%= link_to "Home", '/' %></li>
+    <li><%= link_to "About", about_path %></li>
+    <% if current_user %>
+      <li><%= link_to 'My Garden', '/mygarden'%></li>
+      <li><%= link_to 'Sign Out', '/logout', method: :delete %></li>
       <% else %>
-        <%= link_to 'Sign In', '/login', class: "px2"%>
-      <% end %>
-      </div>
-  </section>
+      <li><%= link_to 'Sign In', '/login', class: "px2"%></li>
+    <% end %>
+    </div>
+  </ul>
 </nav>
