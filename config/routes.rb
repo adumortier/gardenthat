@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   get '/about', to: 'about#show'
   
   get '/login', to: 'visitors/sessions#new'
-  
+
+  get '/search', to: 'search#index'
+
   delete '/logout', to: 'sessions#destroy'
   
   get '/auth/:provider/callback', to: 'sessions#googleAuth'

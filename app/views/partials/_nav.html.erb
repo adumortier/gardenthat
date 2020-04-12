@@ -11,6 +11,10 @@
         <%= link_to "About", about_path %>
       </div>
       <div class="align-middle table-cell p3">
+      <%= form_with(url: "/search", method: "get", local: true) do %>
+        <%= text_field_tag(:search) %>
+        <%= submit_tag("Search") %>
+      <% end %>
       <% if current_user %>
         <%= link_to 'My Garden', '/mygarden'%>
         <%= link_to 'Sign Out', '/logout', method: :delete %>
