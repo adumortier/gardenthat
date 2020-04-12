@@ -1,20 +1,19 @@
 <nav class="primary_nav">
   <ul>
-    <div class="navbar navbar-light bg-light">
-    <li>
-        <%= form_with(url: "/search", method: "get", local: true) do %>
+    <div class="navbar navbar-dark" style="background-color: #8FBC8F;">
+      <%= form_with(url: "/search", method: "get", local: true) do %>
         <%= text_field_tag(:search) %>
         <%= submit_tag("Search") %>
-        <% end %>
-    </li>
-    <li><%= link_to "Home", '/' %></li>
-    <li><%= link_to "About", about_path %></li>
-    <% if current_user %>
-      <li><%= link_to 'My Garden', '/mygarden'%></li>
-      <li><%= link_to 'Sign Out', '/logout', method: :delete %></li>
-      <% else %>
-      <li><%= link_to 'Sign In', '/login', class: "px2"%></li>
-    <% end %>
+      <% end %>
+      <li><%= link_to "Home", '/' %></li>
+      <li><%= link_to "About", about_path %></li>
+      <% if current_user %>
+        <li><%= link_to 'My Garden', '/mygarden'%></li>
+        <li><%= link_to 'Sign Out', '/logout', method: :delete %></li>
+        <% else %>
+        <li><%= link_to 'Sign In', '/login', class: "px2"%></li>
+      <% end %>
     </div>
   </ul>
 </nav>
+<br>
