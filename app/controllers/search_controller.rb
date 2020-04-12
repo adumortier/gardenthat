@@ -1,19 +1,12 @@
 class SearchController < ApplicationController
 
   def index
-    conn = Faraday.new "https://plantmicroservice.herokuapp.com/api/"
-    request = params['search'].strip.gsub(' ','-')
-    response = conn.get(request)
-    json = JSON.parse(response.body, symbolize_names: true)
-    @plant = Plant.new(json)
+    result = PlantService.new.get_search_info(params['search'])
+    @plant = Plant.new(result)
   end
 
   def show
-    conn = Faraday.new "https://plantmicroservice.herokuapp.com/api/"
-    request = params['format'].strip.gsub(' ','-')
-    response = conn.get(request)
-    json = JSON.parse(response.body, symbolize_names: true)
-    @plant = Plant.new(json)
+    result = PlantService.new.get_search_info(params['format'])
+    @plant = Plant.new(result)
   end
-
 end

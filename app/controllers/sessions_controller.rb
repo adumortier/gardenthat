@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 class SessionsController < ApplicationController
-
-  
-
   def destroy
     session[:user_id] = nil
     redirect_to root_path
@@ -20,5 +17,4 @@ class SessionsController < ApplicationController
     return redirect_to profile_questionaire_path if user.zip_code.nil?
     redirect_to root_path
   end
-
 end
