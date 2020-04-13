@@ -14,15 +14,33 @@ RSpec.describe "As a registered user " , type: :feature do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
 			@garden = Garden.create(name: 'A', user: @user1)
 			@plant = Plant.new(name: 'tomato')
-			@garden.plants << @plant
     end
 
     it "View Garden Plants" do
+			@garden.plants << @plant
       visit "/user/mygardens"
       click_on "A"
       expect(current_path).to eq("/user/mygardens/#{@garden.id}")
-      expect(page).to have_content('B')
+			save_and_open_page
+      expect(page).to have_content("#{@garden.name}")
+      expect(page).to have_content("#{@plant.name}")
     end
+
+		it "Catch no plants" do
+			visit "/user/mygardens"
+      click_on "A"
+      expect(current_path).to eq("/user/mygardens/#{@garden.id}")
+      save_and_open_page
+      expect(page).to have_content("No plants in this garden.  Find something you would like to grow and add them to keep track of what you have planted")
+		end
+
+		it "Add plant" do
+			visit '/'
+			fill_in("Search"), with: "tomato"
+			click_on "Search"
+			click_on "Add to A Garden"
+			expect(current_path).to eq('/user/plant/mygardens')
+		end
   end
 end
 

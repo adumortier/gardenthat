@@ -1,1 +1,8 @@
-<h1> Garden Plants </h1>
+<h1> <%= @garden.name %> </h1>
+<% if @garden.plants.empty? %>
+	<h3> No plants in this garden.  Find something you would like to grow and add them to keep track of what you have planted </h3>
+<% else %>
+	<% @garden.plants.each do |plant| %>
+		<p> <%= plant.name %> </p>
+	<% end %>
+<% end %>
