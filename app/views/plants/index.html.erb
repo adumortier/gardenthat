@@ -1,5 +1,5 @@
 <section class='plant_info'>
-  <%= will_paginate @plants , renderer: RemoteLinkPagination::LinkRenderer %>
+  <%= will_paginate @plants  %>
   <%= @plants.map do |plant| %>
     <div class= 'name'> <%= link_to plant.name.capitalize, search_details_path(plant.name) %> </div>
     <% if plant.image.nil? %>
@@ -13,4 +13,5 @@
     <% end %>
     <div class= 'description'> <%= plant.description %></div>
   <% end %>
+  <%= will_paginate @plants  %>
 </section>
