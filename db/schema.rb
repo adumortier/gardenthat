@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 2020_04_12_211316) do
 
   create_table "gardens", force: :cascade do |t|
     t.string "name"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_gardens_on_user_id"
   end

@@ -1,5 +1,6 @@
 <h1> My Garden </h1>
 <% @gardens.each do |garden| %>
-<%= link_to garden.name, "/user/mygardens/#{garden.id}" %>
+<p> <%= link_to garden.name, "/user/mygardens/#{garden.id}" %>
+</p>
 <% end %>
-<%= link_to "Create New Garden", "user/mygardens/new" %>
+<%= link_to "Create New Garden", "/user/mygardens/new" %>

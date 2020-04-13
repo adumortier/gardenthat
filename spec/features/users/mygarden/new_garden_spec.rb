@@ -5,7 +5,7 @@ RSpec.describe "As a registered user " , type: :feature do
   describe "Interacting with MyGarden" do
 
     before(:each) do
-			@user1 = User.create!( email: 'gardenthat@gmail.com',
+      @user1 = User.create!( email: 'gardenthat@gmail.com',
                             name: 'gardenthat',
                             zip_code: '02300',
                             google_token: 'temp',
@@ -13,20 +13,16 @@ RSpec.describe "As a registered user " , type: :feature do
                           )
     end
 
-    it "see all my gardens" do
+		it "Create a garden" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
-			garden = Garden.create(name: "A", user: @user1)
-			visit '/'
-			click_on 'My Garden'
-			expect(current_path).to eq("/user/mygardens")
-			expect(page).to have_content("A")
-		end
-
-		it "catch unregistered user" do
-			visit '/'
-			expect(page).to_not have_content("My Garden")
-			visit '/user/mygardens'
-			expect(page.status_code).to eq(200)
-		end
+      visit "/user/mygardens"
+      click_on "Create New Garden"
+      expect(current_path).to eq("/user/mygardens/new")
+			fill_in :name, with: 'B'
+			click_on "Create Garden"
+			expect(current_path).to eq('/user/mygardens')
+			save_and_open_page
+			expect(page).to have_content('B')
+    end
 	end
 end
