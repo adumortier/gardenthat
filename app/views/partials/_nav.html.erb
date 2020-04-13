@@ -5,12 +5,13 @@
         <%= text_field_tag(:search) %>
         <%= submit_tag("Search") %>
       <% end %>
+
       <li><%= link_to "Home", '/' %></li>
       <li><%= link_to "About", about_path %></li>
       <% if current_user %>
         <li><%= link_to 'My Garden', '/mygarden'%></li>
         <li><%= link_to 'Sign Out', '/logout', method: :delete %></li>
-        <% else %>
+      <% else %>
         <li><%= link_to 'Sign In', '/login', class: "px2"%></li>
       <% end %>
     </div>
