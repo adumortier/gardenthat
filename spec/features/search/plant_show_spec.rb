@@ -35,4 +35,18 @@ RSpec.describe "Plant Search Page" , type: :feature do
         expect(page).to have_content(75)
       end
   end
+    it "shows a link to login ", :vcr do
+      visit '/'
+      fill_in :search, with: 'tomato'
+      click_on 'Search'
+
+      expect(current_path).to eq('/search')
+
+      within('.plant_info') do
+        click_on 'Tomato'
+      end
+
+      expect(current_path).to eq('/search/details.tomato')
+      expect(page).to have_link('Login With Google to Add to your Garden!')
+    end
 end

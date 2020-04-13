@@ -11,3 +11,7 @@
   <p>How to Sow: <%=  @plant.sowing %> </p>
   <p>Average Spacing <%=  @plant.spacing %> </p>
 </section>
+
+<% if current_user.nil? %>
+  <%= link_to 'Login With Google to Add to your Garden!', '/login' %>
+<% end %>
