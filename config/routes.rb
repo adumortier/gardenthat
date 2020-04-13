@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   post '/profile', to: 'profiles#create'
 
 	namespace :user do
-		get '/mygardens', to: 'mygardens#index'
+		namespace :mygardens do
+			get '/', to: 'mygardens#index'
+		end
 	end
 end

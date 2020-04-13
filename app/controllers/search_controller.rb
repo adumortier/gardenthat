@@ -5,7 +5,7 @@ class SearchController < ApplicationController
     request = params['search'].strip.gsub(' ','-')
     response = conn.get(request)
     json = JSON.parse(response.body, symbolize_names: true)
-    @plant = Plant.new(json)
+    @plant = ApiPlant.new(json)
   end
 
   def show
@@ -13,7 +13,7 @@ class SearchController < ApplicationController
     request = params['format'].strip.gsub(' ','-')
     response = conn.get(request)
     json = JSON.parse(response.body, symbolize_names: true)
-    @plant = Plant.new(json)
+    @plant = ApiPlant.new(json)
   end
 
 end
