@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   get '/profile/questionaire', to: 'profiles#new'
   post '/profile', to: 'profiles#create'
+
+  get '/plants', to: 'plants#index'
 end
