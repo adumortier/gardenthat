@@ -29,6 +29,7 @@ gem 'omniauth-google-oauth2'
 gem 'rubocop'
 gem 'json'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap'
 
 group :development, :test do
   gem 'awesome_print'
