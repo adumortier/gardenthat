@@ -21,5 +21,6 @@ Rails.application.routes.draw do
 		get '/mygardens', to: 'mygardens#index'
 		get '/mygardens/new', to: 'mygardens#new'
 		post '/mygardens', to: 'mygardens#create'
+		get '/mygardens/:id', to: 'mygardens/plants#index'
 	end
 end
