@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get '/profile/questionaire', to: 'profiles#new'
   get '/profile/:id', to: 'profiles#show'
+  get '/profile/:id/edit', to: 'profiles#edit'
+  patch '/profile/:id', to: 'profiles#update'
   post '/profile', to: 'profiles#create'
 
 
