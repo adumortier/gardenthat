@@ -6,6 +6,10 @@ class User::MygardensController < User::BaseController
 	def new
 	end
 
+	def show
+		@plant = Plant.find(params[:id])
+	end
+
 	def create
 		garden = current_user.gardens.create(garden_params)
 		if garden.save

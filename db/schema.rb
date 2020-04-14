@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 2020_04_12_211316) do
 
   create_table "plants", force: :cascade do |t|
     t.string "name"
+    t.string "image"
+    t.string "perennial"
+    t.string "first_harvest"
+    t.string "last_harvest"
+    t.string "description"
+    t.string "sun"
+    t.string "height"
+    t.string "spread"
+    t.string "spacing"
   end
 
   create_table "users", force: :cascade do |t|

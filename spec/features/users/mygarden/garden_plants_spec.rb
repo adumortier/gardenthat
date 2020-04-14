@@ -21,7 +21,6 @@ RSpec.describe "As a registered user " , type: :feature do
       visit "/user/mygardens"
       click_on "A"
       expect(current_path).to eq("/user/mygardens/#{@garden.id}")
-			save_and_open_page
       expect(page).to have_content("#{@garden.name}")
       expect(page).to have_content("#{@plant.name}")
     end
@@ -30,16 +29,19 @@ RSpec.describe "As a registered user " , type: :feature do
 			visit "/user/mygardens"
       click_on "A"
       expect(current_path).to eq("/user/mygardens/#{@garden.id}")
-      save_and_open_page
-      expect(page).to have_content("No plants in this garden.  Find something you would like to grow and add them to keep track of what you have planted")
+      expect(page).to have_content('plants in this garden. Find something you would like to grow and add them to keep track of what you have')
 		end
 
-		it "Add plant" do
+		it "Add plant", :vcr do
 			visit '/'
-			fill_in("Search"), with: "tomato"
+			fill_in "search", with: "tomato"
 			click_on "Search"
-			click_on "Add to A Garden"
-			expect(current_path).to eq('/user/plant/mygardens')
+			click_on "Tomato"
+			click_on "Add to MyGarden"
+			plant = Plant.last
+			expect(current_path).to eq("/user/plants/#{plant.id}/mygardens")
+			click_on 'A'
+			expect(page).to have_content("tomato")
 		end
   end
 end
