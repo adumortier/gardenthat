@@ -18,6 +18,7 @@ RSpec.describe "As a registered user " , type: :feature do
 
     click_on "My Profile"
 
+    expect(current_path).to eq("/profile/#{@user1.id}")
     expect(page).to have_content(@user1.email)
     expect(page).to have_content(@user1.name)
     expect(page).to have_content(@user1.zip_code)
