@@ -11,6 +11,7 @@
       <li> <%= link_to "Browse All Plants", '/plants' %>
       <% if current_user %>
         <li><%= link_to 'My Garden', '/user/mygardens'%></li>
+        <li><%= link_to 'My Profile', "/profile/#{current_user.id}" %></li>
         <li><%= link_to 'Sign Out', '/logout', method: :delete %></li>
       <% else %>
         <li><%= link_to 'Sign In', '/login', class: "px2"%></li>
