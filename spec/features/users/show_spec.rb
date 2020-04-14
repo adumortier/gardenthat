@@ -21,6 +21,5 @@ RSpec.describe "As a registered user " , type: :feature do
     expect(page).to have_content(@user1.email)
     expect(page).to have_content(@user1.name)
     expect(page).to have_content(@user1.zip_code)
-    save_and_open_page
   end
 end
