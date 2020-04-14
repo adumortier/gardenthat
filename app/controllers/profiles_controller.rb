@@ -18,12 +18,8 @@ class ProfilesController < ApplicationController
   def update
     user = User.find(params[:id])
     user.update(user_params)
-    if user.save
-      redirect_to "/profile/#{user.id}"
-    else
-      flash.now[:alert] = 'Empty Field. Please Fill in all fields.'
-      render :edit
-    end
+    user.save
+    redirect_to "/profile/#{user.id}"
   end
 
   def create
