@@ -12,8 +12,7 @@ RSpec.describe "Browse All Plants Page" , type: :feature do
       expect(first('.name').text).to_not be_empty
       expect(first('.description').text).to_not be_empty
     end
-    save_and_open_page
-    # expect(page).to have_content("Displaying 25 Results")
-    # expect(page).to have_link('Next Page')
+
+    expect(page).to have_link('Next')
   end
 end
