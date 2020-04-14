@@ -11,9 +11,20 @@ class ProfilesController < ApplicationController
     end
   end
 
-  # def edit
-  #   @user = User.find(session[:user_id])
-  # end
+  def edit
+    @user = User.find(current_user.id)
+  end
+
+  def update
+    user = User.find(params[:id])
+    user.update(user_params)
+    if user.save
+      redirect_to "/profile/#{user.id}"
+    else
+      flash.now[:alert] = 'Empty Field. Please Fill in all fields.'
+      render :edit
+    end
+  end
 
   def create
     if current_user
@@ -22,4 +33,9 @@ class ProfilesController < ApplicationController
     redirect_to root_path
   end
 
+  private
+
+    def user_params
+      params.permit(:zip_code)
+    end
 end

@@ -1,0 +1,9 @@
+<h2>Edit Profile </h2>
+<%= form_tag "/profile/#{@user.id}", method: :patch do  %>
+  <%= label_tag :zip_code %>
+  <%= text_field_tag :zip_code, "#{@user.zip_code}"%>
+
+  <%= submit_tag "Update Profile" %>
+<% end %>
+
+<p>Since you are signed in with google please update your name and e-mail address with them!</p>
