@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_04_12_211316) do
     t.string "sun"
     t.string "height"
     t.string "spread"
+    t.string "sowing"
     t.string "spacing"
   end
 

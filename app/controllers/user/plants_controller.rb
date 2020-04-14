@@ -21,6 +21,7 @@ class User::PlantsController < User::BaseController
 			:sun,
 			:height,
 			:spread,
+			:sowing,
 			:spacing
 		)
 	end

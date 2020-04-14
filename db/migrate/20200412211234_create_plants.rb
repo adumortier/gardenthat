@@ -10,6 +10,7 @@ class CreatePlants < ActiveRecord::Migration[5.2]
       t.string :sun
       t.string :height
       t.string :spread
+			t.string :sowing
       t.string :spacing
     end
   end

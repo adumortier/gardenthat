@@ -29,6 +29,9 @@ gem 'omniauth-google-oauth2'
 gem 'rubocop'
 gem 'json'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap'
+gem 'will_paginate', '~> 3.3.0'
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   gem 'awesome_print'

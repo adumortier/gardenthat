@@ -26,3 +26,7 @@
 		<%= submit_tag 'Add to MyGarden' %>
 	<% end %>
 <% end %>
+
+<% if current_user.nil? %>
+  <%= link_to 'Login With Google to Add to your Garden!', '/login' %>
+<% end %>

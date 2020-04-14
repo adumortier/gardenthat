@@ -14,6 +14,5 @@ class ApiPlant
     @spread = info[:spread]
     @sowing = info[:sowing]
     @spacing = info[:spacing]
-  end 
-  
+  end   
 end

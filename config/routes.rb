@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
   root 'welcome#index'
   get '/about', to: 'about#show'
@@ -16,6 +14,8 @@ Rails.application.routes.draw do
 
   get '/profile/questionaire', to: 'profiles#new'
   post '/profile', to: 'profiles#create'
+
+  get '/plants', to: 'plants#index'
 
 	namespace :user do
 		get '/mygardens', to: 'mygardens#index'
