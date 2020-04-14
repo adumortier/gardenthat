@@ -17,8 +17,7 @@ Rails.application.routes.draw do
   get '/profile/:id/edit', to: 'profiles#edit'
   patch '/profile/:id', to: 'profiles#update'
   post '/profile', to: 'profiles#create'
-
-
+  delete '/profile/:id', to: 'profiles#destroy'
 
   get '/plants', to: 'plants#index'
 

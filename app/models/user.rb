@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-	has_many :gardens
+	has_many :gardens, dependent: :destroy
+	has_many :garden_plants, dependent: :destroy
   validates_presence_of :name, :email, :google_token
   validates :email, uniqueness: true
 	validates :zip_code, length: {minimum: 5, maximum: 5}, allow_blank: true
