@@ -1,17 +1,15 @@
 <section class='plant_info'>
   <%= will_paginate(@plants, renderer: BootstrapPagination::Rails)  %>
-  <%= @plants.map do |plant| %>
-    <div class= 'name'> <%= link_to plant.name.capitalize, search_details_path(plant.name) %> </div>
-    <% if plant.image.nil? %>
-    <div class= 'image'>
-      <%= image_tag('https://www.aisd.net/burgin-elementary/wp-content/files/sites/54/2018/08/No-image-available.jpg', height:'100', width: '150') %>
-    </div>
-    <% else %>
-    <div class= 'image'>
-     <%= image_tag(plant.image, height:'100', width: '150') %>
+  <% @plants.map do |plant| %>
+  <div class="card">
+    <div class="card-body">
+    <h5 class='card-title'><div class= 'name'> <%= link_to plant.name.capitalize, search_details_path(plant.name) %></div></h5>
+
+    <div class='image'><%= image_tag(plant.image, height:'100', width: '150') %></div>
+
+    <div class='description'><%= plant.description %></div>
    </div>
-    <% end %>
-    <div class= 'description'> <%= plant.description %></div>
+ </div>
   <% end %>
-  <%= will_paginate @plants  %>
+  <%= will_paginate @plants %>
 </section>
