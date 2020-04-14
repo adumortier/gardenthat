@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   get '/auth/failure', to: redirect('/')
 
   get '/profile/questionaire', to: 'profiles#new'
+  get '/profile/:id', to: 'profiles#show'
   post '/profile', to: 'profiles#create'
+
+
 
   get '/plants', to: 'plants#index'
 
@@ -28,6 +31,6 @@ Rails.application.routes.draw do
 
 		namespace :mygardens do
 			post '/:garden_id/plants/:plant_id', to: 'plants#create', as: 'plants'
-		end		
+		end
 	end
 end
