@@ -10,7 +10,6 @@ class PlantService
   end
 
   def get_all_plants
-    require "pry"; binding.pry
     JSON.parse(new_conn.body, symbolize_names: true)
   end
 end
