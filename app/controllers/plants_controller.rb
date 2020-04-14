@@ -5,10 +5,9 @@ class PlantsController < ApplicationController
     json = JSON.parse(response.body, symbolize_names: true)
 
     plants = json.map do |plant|
-      Plant.new(plant)
+      ApiPlant.new(plant)
     end
 
     @plants = plants.paginate(:page => params[:page], :per_page => 25)
   end
-
 end

@@ -1,4 +1,4 @@
-class Plant
+class ApiPlant
 
   attr_reader :name, :perennial, :first_harvest, :last_harvest, :description, :sun, :image, :height, :spread, :sowing, :spacing
 
@@ -14,6 +14,5 @@ class Plant
     @spread = info[:spread]
     @sowing = info[:sowing]
     @spacing = info[:spacing]
-  end 
-  
+  end   
 end

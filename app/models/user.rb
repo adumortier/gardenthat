@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_many :gardens
   validates_presence_of :name, :email, :google_token
   validates :email, uniqueness: true
   

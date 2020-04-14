@@ -1,0 +1,19 @@
+<%= form_tag path, method: method do %>
+
+  <p><%= label_tag :garden_name %>
+  <%= text_field_tag :name, name %></p>
+
+  <p><%= label_tag :address %>
+  <%= text_field_tag :address, address %></p>
+
+  <p><%= label_tag :city %>
+  <%= text_field_tag :city, city %></p>
+
+  <p><%= label_tag :state %>
+  <%= text_field_tag :state, state %></p>
+
+  <p><%= label_tag :zip %>
+  <%= text_field_tag :zip, zip %></p>
+
+  <%= submit_tag button_text %>
+<% end %>

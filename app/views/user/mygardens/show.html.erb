@@ -1,0 +1,4 @@
+<h2> Which of Your Garden's Would You Like to Add This Plant To? </h2>
+<% current_user.gardens.each do |garden| %>
+<p> <%= link_to garden.name, user_mygardens_plants_path(garden.id, @plant.id), method: :post %> </p>
+<% end %>
