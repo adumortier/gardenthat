@@ -8,8 +8,4 @@ class PlantService
     response = conn.get(request)
     JSON.parse(response.body, symbolize_names: true)
   end
-
-  def get_all_plants
-    JSON.parse(new_conn.body, symbolize_names: true)
-  end
 end

@@ -19,6 +19,7 @@ class ProfilesController < ApplicationController
     user = User.find(params[:id])
     user.update(user_params)
     user.save
+    flash[:notice] = 'Profile Updated!'
     redirect_to "/profile/#{user.id}"
   end
 
@@ -27,6 +28,13 @@ class ProfilesController < ApplicationController
       current_user.update(zip_code: params["zip_code"])
     end
     redirect_to root_path
+  end
+
+  def destroy
+    User.find(params[:id]).destroy
+    session.clear
+    redirect_to '/'
+    flash[:alert] = "Profile Deleted"
   end
 
   private
