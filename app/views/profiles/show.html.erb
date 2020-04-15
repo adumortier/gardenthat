@@ -1,0 +1,6 @@
+<h1>Name: <%= @user.name %></h1>
+<h4>Email: <%= @user.email %></h4>
+<h4>Zip Code: <%= @user.zip_code %></h4>
+<%= link_to "Edit Profile", "/profile/#{@user.id}/edit" %>
+<br><br><br>
+<%= link_to "Delete Profile", "/profile/#{@user.id}", method: :delete %>
