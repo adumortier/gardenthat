@@ -12,15 +12,15 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
+  <%= render 'partials/nav' %>
   <body>
-		<%= render 'partials/nav' %>
 
     <% flash.each do |name, msg| %>
       <div class= "<%=name%>-flash">
         <p><%= msg %></p>
       </div>
     <% end %>
-    
+
     <%= yield %>
   </body>
 </html>
