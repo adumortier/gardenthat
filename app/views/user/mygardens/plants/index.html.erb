@@ -1,8 +1,16 @@
-<h1> <%= @garden.name %> </h1>
+<button type="button" class="btn btn-primary btn-lg btn-block"><%= @garden.name %></button>
 <% if @garden.plants.empty? %>
 	<h3> No plants in this garden.  Find something you would like to grow and add them to keep track of what you have planted </h3>
 <% else %>
 	<% @garden.plants.each do |plant| %>
-		<p> <%= plant.name %> </p>
+		<div class="card">
+    <div class="card-body">
+    <h5 class='card-title'><div class= 'name'> <%= link_to plant.name.capitalize, search_details_path(plant.name) %></div></h5>
+
+    <div class='image'><%= image_tag(plant.image, height:'100', width: '150') %></div>
+
+    <div class='description'><%= plant.description %></div>
+   </div>
+ </div>
 	<% end %>
 <% end %>

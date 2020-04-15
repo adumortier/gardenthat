@@ -1,6 +1,5 @@
-<h1> My Garden </h1>
+<h1> My Gardens </h1>
 <% @gardens.each do |garden| %>
-<p> <%= link_to garden.name, "/user/mygardens/#{garden.id}" %>
-</p>
+<button type="button" class="btn btn-success"><%= link_to garden.name, "/user/mygardens/#{garden.id}" %></button></p>
 <% end %>
-<%= link_to "Create New Garden", "/user/mygardens/new" %>
+<button type="button" class="btn btn-link"><%= link_to "Create New Garden", "/user/mygardens/new" %></button>
