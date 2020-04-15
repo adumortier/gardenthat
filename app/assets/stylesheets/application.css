@@ -15,10 +15,10 @@
  */
 
  :root {
-   margin: 20px
+   margin: 20px;
  }
 
- ul {
+ /* ul {
    list-style-type: none;
    margin: 0;
    padding: 0;
@@ -28,4 +28,4 @@
 li {
   display: inline;
   float: left;
-}
+} */

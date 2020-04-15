@@ -1,0 +1,19 @@
+/* .background-img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  flex: 1;
+} */
+
+/* .welcome{
+  background-image: url("https://images.pexels.com/photos/169523/pexels-photo-169523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: auto;
+  width: 100%
+} */
+
+.welcome-main{
+  text-align: center;
+  z-index: 1;
+  background-color: white
+}
