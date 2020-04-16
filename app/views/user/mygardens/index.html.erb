@@ -1,5 +1,6 @@
 <h1> My Gardens </h1>
 <% @gardens.each do |garden| %>
-<button type="button" class="btn btn-success"><%= link_to garden.name, "/user/mygardens/#{garden.id}" %></button></p>
+</p><button type="button" class="btn btn-success"><%= link_to garden.name, "/user/mygardens/#{garden.id}" %></button>
+<button type="button" class="btn btn-warning"><%= button_to "Delete Garden", "/user/mygardens/#{garden.id}", method: :delete %></button></p>
 <% end %>
 <button type="button" class="btn btn-link"><%= link_to "Create New Garden", "/user/mygardens/new" %></button>

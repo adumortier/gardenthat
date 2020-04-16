@@ -1,6 +1,6 @@
 class User::MygardensController < User::BaseController 
 	def index
-		@gardens = current_user.gardens
+		@gardens = User.find(current_user.id).gardens
 	end
 
 	def new
@@ -18,6 +18,11 @@ class User::MygardensController < User::BaseController
 			flash[:notice] = "Your new garden needs a name"
 			redirect_back(fallback_location: '/')
 		end
+	end
+
+	def destroy
+		garden = Garden.find(params[:id]).destroy
+		redirect_to('/user/mygardens')
 	end
 
 	private
