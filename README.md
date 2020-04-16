@@ -1,24 +1,109 @@
-# README
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/adumortier">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  <h3 align="center">Gard(in) That!</h3>
 
-Things you may want to cover:
+<p align="center">
+Gard(in) That is an application meant for ANY gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
 
-* Ruby version
 
-* System dependencies
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-* Configuration
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-* Services (job queues, cache servers, search engines, etc.)
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-* Deployment instructions
+Gard(in) That was built on a rails framework that is linked with two different Sinatra microservices. Our plant microservice houses a database of basic plant information and is tied to GrowStuff's API (see acknowledgments section below). Our second microservice ties into Google Calendars. OAuth is also through Google. 
 
-* ...
+Our Plant MicroService can be found here: https://github.com/nkeller1/plant_search
+
+Our Notification MicroService can be found here: https://github.com/adumortier/notifications
+
+
+### Built With
+
+* Ruby on Rails
+* Sintra
+* Deployed With Heroku
+* PostgreSQL
+* Bootstrap
+* RSpec
+* RackTest
+* Travis CI
+* A forge of amazing RubyGems
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+### Installation
+
+1. Clone the repo
+```sh
+git clone https://github.com/adumortier.git
+```
+2. Install the Gem File
+```sh
+bundle install
+```
+3. Create your environment
+```sh
+rails db:create
+rails db:migrate
+```
+4. Install Figaro
+```sh
+bundle exec figaro install
+```
+5. You will need to set up your application.yml file with your google API information
+```sh
+GOOGLE_CLIENT_ID: <YOUR KEY HERE>
+GOOGLE_CLIENT_SECRET: <YOUR KEY HERE>
+TEST_USER_GOOGLE_TOKEN: <YOUR KEY HERE>
+TEST_USER_GOOGLE_REFRESH_TOKEN: <YOUR KEY HERE>
+```
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+As a visitor, you can search for and browse the plants we currently have available. If you want to create a garden, sign up! You may create as many gardens as you wish.  If you find a plant that you want to add to a garden, navigate to the plant's detail page and click 'Add plant to my garden'. Once the plant has been added our background workers will automatically add the estimated best time to harvest your plant to your calendar. 
+
+Future iterations will include: 
+* a watering schedule for the plants in your garden(s). 
+* recommendations based on your location
+* suggestions based on the plants you already have in your garden
+* a 'Tips' section on how to get the most out of your garden
+* an entire Gard(in) That community!
+
+<!-- CONTACT -->
+## Contact
+
+Nathan Keller - keller.nathan@gamil.com
+
+Deployed Application on Heroku: [Gard(in) That!](https://gardenthat.herokuapp.com/)
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* [GrowStuff.org](https://www.growstuff.org/)
+* [Google Dev](https://console.developers.google.com/)

@@ -29,7 +29,7 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 16 Apr 2020 17:41:34 GMT
+      - Thu, 16 Apr 2020 20:17:55 GMT
       Via:
       - 1.1 vegur
     body:
@@ -77,5 +77,42 @@ http_interactions:
         into garden 50 cm spacings in rows. Two rows per 1m wide bed. Needs staking.","slug":"island-bay-tomato","created_at":"2020-04-16T16:24:39.621Z","updated_at":"2020-04-16T16:24:39.621Z"},{"id":242,"name":"tigerella
         tomato","image":null,"description":null,"slug":"tigerella-tomato","created_at":"2020-04-16T16:24:40.260Z","updated_at":"2020-04-16T16:24:40.260Z"}]'
     http_version: null
-  recorded_at: Thu, 16 Apr 2020 17:41:34 GMT
+  recorded_at: Thu, 16 Apr 2020 20:17:54 GMT
+- request:
+    method: get
+    uri: https://plantmicroservice.herokuapp.com/plant/roma-tomato
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '11'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 16 Apr 2020 20:17:55 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '"Bad Plant"'
+    http_version: null
+  recorded_at: Thu, 16 Apr 2020 20:17:55 GMT
 recorded_with: VCR 5.1.0

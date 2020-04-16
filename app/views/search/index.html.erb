@@ -1,5 +1,7 @@
 <section class='plant_info'>
-  <div class= 'name'> <%= link_to @plant.name.capitalize, search_details_path(@plant.name) %>  </div>
-  <div class= 'image'> <%= image_tag(@plant.image, height:'300', width: '400') %> </div>
-  <div class= 'description'> <%= @plant.description %></div>
+  <% @plants.each do|plant| %>
+    <div class= 'name'> <%= link_to plant.name.capitalize, search_details_path(plant.slug) %>  </div>
+    <div class= 'image'> <%= image_tag(plant.image, height:'300', width: '400') %> </div>
+    <div class= 'description'> <%= plant.description %></div>
+  <% end %>
 </section>

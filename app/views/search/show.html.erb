@@ -1,32 +1,35 @@
 <section class='plant_details'>
-  <h2>Name: <%=  @plant.name.capitalize %> </h2>
-  <%= image_tag(@plant.image, height:'300', width: '400') %>
-  <p>Perennial: <%=  @plant.perennial %> </p>
-  <p>Time to First Harvest: <%=  @plant.first_harvest %></p>
-  <p>Time to Last Harvest: <%=  @plant.last_harvest %></p>
-  <p>Description: <%=  @plant.description %></p>
-  <p>Amount of Sun: <%=  @plant.sun %></p>
-  <p>Average Height: <%=  @plant.height %> cm </p>
-  <p>Average Spread: <%=  @plant.spread %> cm </p>
-  <p>How to Sow: <%=  @plant.sowing %> </p>
-  <p>Average Spacing <%=  @plant.spacing %> </p>
+  <% if @error %>
+    <h2>We are sorry, no details currently avaiable for this plant. Check back soon. </h2>
+  <% else %>
+    <h2>Name: <%=  @plant.name.capitalize %> </h2>
+    <%= image_tag(@plant.image, height:'300', width: '400') %>
+    <p>Perennial: <%=  @plant.perennial %> </p>
+    <p>Time to First Harvest: <%=  @plant.first_harvest %></p>
+    <p>Time to Last Harvest: <%=  @plant.last_harvest %></p>
+    <p>Description: <%=  @plant.description %></p>
+    <p>Amount of Sun: <%=  @plant.sun %></p>
+    <p>Average Height: <%=  @plant.height %> cm </p>
+    <p>Average Spread: <%=  @plant.spread %> cm </p>
+    <p>How to Sow: <%=  @plant.sowing %> </p>
+    <p>Average Spacing <%=  @plant.spacing %> </p>
 </section>
-<% if current_user %>
-	<%= form_tag user_plants_path() do %>
-		<%= hidden_field_tag :name, @plant.name %>
-		<%= hidden_field_tag :image, @plant.image %>
-		<%= hidden_field_tag :perennial, @plant.perennial %>
-		<%= hidden_field_tag :first_harvest, @plant.first_harvest %>
-		<%= hidden_field_tag :last_harvest, @plant.last_harvest %>
-		<%= hidden_field_tag :description, @plant.description %>
-		<%= hidden_field_tag :sun, @plant.sun %>
-		<%= hidden_field_tag :height, @plant.height %>
-		<%= hidden_field_tag :spread, @plant.spread %>
-		<%= hidden_field_tag :spacing, @plant.spacing %>
-		<%= submit_tag 'Add to MyGarden' %>
-	<% end %>
+  <% if current_user %>
+  	<%= form_tag user_plants_path() do %>
+  		<%= hidden_field_tag :name, @plant.name %>
+  		<%= hidden_field_tag :image, @plant.image %>
+  		<%= hidden_field_tag :perennial, @plant.perennial %>
+  		<%= hidden_field_tag :first_harvest, @plant.first_harvest %>
+  		<%= hidden_field_tag :last_harvest, @plant.last_harvest %>
+  		<%= hidden_field_tag :description, @plant.description %>
+  		<%= hidden_field_tag :sun, @plant.sun %>
+  		<%= hidden_field_tag :height, @plant.height %>
+  		<%= hidden_field_tag :spread, @plant.spread %>
+  		<%= hidden_field_tag :spacing, @plant.spacing %>
+  		<%= submit_tag 'Add to MyGarden' %>
+  	<% end %>
+  <% end %>
 <% end %>
-
 <% if current_user.nil? %>
   <%= link_to 'Login With Google to Add to your Garden!', '/login' %>
 <% end %>

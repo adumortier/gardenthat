@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://notificationmicroservice.herokuapp.com/calendar/info?refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '132'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 16 Apr 2020 17:41:35 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"GardenThatApp":"20ice9g2cm0v5lkj6j8jm8hbgk@group.calendar.google.com","gardenthattesting@gmail.com":"gardenthattesting@gmail.com"}'
+    http_version: null
+  recorded_at: Thu, 16 Apr 2020 17:41:35 GMT
+recorded_with: VCR 5.1.0
