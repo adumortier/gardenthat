@@ -11,6 +11,12 @@ class User::Mygardens::PlantsController < User::BaseController
     add_notification(garden, plant)
 		redirect_to("/user/mygardens/#{garden.id}")
   end
+
+  def destroy
+    garden_plant = GardenPlant.where("garden_id= #{params[:garden_id]} AND plant_id= #{params[:plant_id]}").first
+    garden_plant.destroy
+    redirect_to("/user/mygardens/#{params[:garden_id]}")
+  end
   
   private 
   
