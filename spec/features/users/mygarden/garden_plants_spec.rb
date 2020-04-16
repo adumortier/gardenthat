@@ -32,7 +32,7 @@ RSpec.describe "As a registered user " , type: :feature do
       expect(page).to have_content('plants in this garden. Find something you would like to grow and add them to keep track of what you have')
 		end
 
-    it "Add plant", :vcr do
+    xit "Add plant", :vcr do
       CalendarService.create_calendar(@user1, "testing")
 			visit '/'
 			fill_in "search", with: "tomato"
