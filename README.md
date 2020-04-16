@@ -19,7 +19,6 @@ Gard(in) That is an application meant for ANY gardener. Search a selection of fr
 * [Getting Started](#getting-started)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Developer GitHub Profiles](#contact)
 * [Acknowledgements](#acknowledgements)
 
 
@@ -94,19 +93,18 @@ Future iterations will include:
 * a 'Tips' section on how to get the most out of your garden
 * an entire Gard(in) That community!
 
-<!-- CONTACT -->
-## Developer GitHub Profiles
-
-Paul DeBevoc - [GitHub](https://github.com/PaulDebevec)
-Alex Dumortier - [GitHub](https://github.com/adumortier)
-Nathan Keller - [GitHub](https://github.com/nkeller1)
-Will Kunz - [GitHub](https://github.com/willkunz13)
-
-Deployed Application on Heroku: [Gard(in) That!](https://gardenthat.herokuapp.com/)
-
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
 * [GrowStuff.org](https://www.growstuff.org/)
 * [Google Dev](https://console.developers.google.com/)
+
+## Developer GitHub Profiles
+
+Paul DeBevoc - [GitHub](https://github.com/PaulDebevec) <br>
+Alex Dumortier - [GitHub](https://github.com/adumortier)<br>
+Nathan Keller - [GitHub](https://github.com/nkeller1)<br>
+Will Kunz - [GitHub](https://github.com/willkunz13)<br>
+
+Deployed Application on Heroku: [Gard(in) That!](https://gardenthat.herokuapp.com/)
