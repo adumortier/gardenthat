@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://notificationmicroservice.herokuapp.com/calendar/new?calendar_name=testing&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
+    uri: https://notificationmicroservice.herokuapp.com/calendar/new?calendar_name=GardenThatApp&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
     body:
       encoding: UTF-8
       string: ''

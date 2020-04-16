@@ -1,12 +1,14 @@
 class SearchController < ApplicationController
 
   def index
-    result = PlantService.new.get_search_info(params['search'])
-    @plant = ApiPlant.new(result)
+    result = PlantService.new.get_multiple_info(params['search'])
+    @plants = result.map do |plant|
+      ApiPlant.new(plant)
+    end
   end
 
   def show
-    result = PlantService.new.get_search_info(params['format'])
+    result = PlantService.new.get_individual_plant_details(params['format'])
     @plant = ApiPlant.new(result)
   end
 end
