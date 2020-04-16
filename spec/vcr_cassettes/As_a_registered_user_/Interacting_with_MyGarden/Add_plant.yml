@@ -1,14 +1,16 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://plantmicroservice.herokuapp.com/api/tomato
+    method: post
+    uri: https://notificationmicroservice.herokuapp.com/calendar/new?calendar_name=testing&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
       - Faraday v0.17.3
+      Content-Length:
+      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,28 +25,20 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '832'
+      - '78'
       X-Content-Type-Options:
       - nosniff
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Mon, 13 Apr 2020 22:21:04 GMT
+      - Thu, 16 Apr 2020 00:50:33 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"tomato","perennial":false,"first_harvest":88,"last_harvest":110,"description":"The
-        tomato is the fruit of the tomato plant, a member of the Nightshade family
-        (Solanaceae). The fruit grows on a sprawling vine that is often trellised
-        or caged to keep it upright. There are many kinds of tomatoes, including conventional,
-        hybrid, heirloom, plum, grape, and cherry. Determinate or bush varieties do
-        not need pruning and can be grown without trellises or cages. Indeterminate
-        or climbing varieties benefit from pruning and should be trellised, caged,
-        or staked.","sun":"Full Sun","image":"https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/5dc3618ef2c1020004f936e4.jpg?1573085580","height":90,"spread":60,"sowing":"Direct
-        seed indoors, transplant seedlings outside after hardening off","spacing":75}'
+      string: '{"name":"testing","id":"nhdqlck98270e4vg700vnum01g@group.calendar.google.com"}'
     http_version: null
-  recorded_at: Mon, 13 Apr 2020 22:21:04 GMT
+  recorded_at: Thu, 16 Apr 2020 00:50:32 GMT
 - request:
     method: get
     uri: https://plantmicroservice.herokuapp.com/api/tomato
@@ -74,7 +68,7 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Mon, 13 Apr 2020 22:21:05 GMT
+      - Thu, 16 Apr 2020 00:50:34 GMT
       Via:
       - 1.1 vegur
     body:
@@ -89,5 +83,90 @@ http_interactions:
         or staked.","sun":"Full Sun","image":"https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/5dc3618ef2c1020004f936e4.jpg?1573085580","height":90,"spread":60,"sowing":"Direct
         seed indoors, transplant seedlings outside after hardening off","spacing":75}'
     http_version: null
-  recorded_at: Mon, 13 Apr 2020 22:21:05 GMT
+  recorded_at: Thu, 16 Apr 2020 00:50:33 GMT
+- request:
+    method: get
+    uri: https://plantmicroservice.herokuapp.com/api/tomato
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '832'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 16 Apr 2020 00:50:35 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"tomato","perennial":false,"first_harvest":88,"last_harvest":110,"description":"The
+        tomato is the fruit of the tomato plant, a member of the Nightshade family
+        (Solanaceae). The fruit grows on a sprawling vine that is often trellised
+        or caged to keep it upright. There are many kinds of tomatoes, including conventional,
+        hybrid, heirloom, plum, grape, and cherry. Determinate or bush varieties do
+        not need pruning and can be grown without trellises or cages. Indeterminate
+        or climbing varieties benefit from pruning and should be trellised, caged,
+        or staked.","sun":"Full Sun","image":"https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/5dc3618ef2c1020004f936e4.jpg?1573085580","height":90,"spread":60,"sowing":"Direct
+        seed indoors, transplant seedlings outside after hardening off","spacing":75}'
+    http_version: null
+  recorded_at: Thu, 16 Apr 2020 00:50:34 GMT
+- request:
+    method: post
+    uri: https://notificationmicroservice.herokuapp.com/event/new?calendar_id=nhdqlck98270e4vg700vnum01g@group.calendar.google.com&date=2020-07-13&description=It%27s%20time%20to%20harvest%20your%20tomato&name=Tomato%20harvest%20time!&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '117'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 16 Apr 2020 00:50:36 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"summary":"Tomato harvest time!","description":"It''s time to harvest
+        your tomato","id":"tv8d0qnt38t0ck8sk068bm44f8"}'
+    http_version: null
+  recorded_at: Thu, 16 Apr 2020 00:50:35 GMT
 recorded_with: VCR 5.1.0
