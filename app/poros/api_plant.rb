@@ -10,7 +10,8 @@ class ApiPlant
               :height,
               :spread,
               :sowing,
-              :spacing
+              :spacing,
+              :slug
 
   def initialize(info)
     @name = info[:name]
@@ -24,6 +25,7 @@ class ApiPlant
     @spread = info[:spread]
     @sowing = info[:sowing]
     @spacing = info[:spacing]
+    @slug = info[:slug]
   end
 
   def default_image(image)
