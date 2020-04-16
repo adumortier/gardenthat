@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 		get '/mygardens/new', to: 'mygardens#new'
 		post '/mygardens', to: 'mygardens#create'
 		get '/mygardens/:id', to: 'mygardens/plants#index'
-
+    delete '/mygardens/:garden_id/plants/:plant_id', to: 'mygardens/plants#destroy'
 		post '/plants', to: 'plants#create'
 		get '/plants/:id/mygardens', to: 'mygardens#show', as: 'plants_mygardens'
 
