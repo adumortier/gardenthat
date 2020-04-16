@@ -9,6 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/3dbd235a07.js"></script>
 
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
@@ -17,7 +18,7 @@
   <body>
 
     <% flash.each do |name, msg| %>
-      <div class= "<%=name%>-flash">
+      <div class= "<%=name%>-flash alert alert-primary" role="alert">
         <%= msg %>
       </div>
     <% end %>
