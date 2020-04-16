@@ -16,7 +16,7 @@ RSpec.describe "As a registered user " , type: :feature do
 		it "Create a garden" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
       visit "/user/mygardens"
-      click_on "Create New Garden"
+      click_link "Create New Garden"
       expect(current_path).to eq("/user/mygardens/new")
 			fill_in :name, with: 'B'
 			click_on "Create Garden"
