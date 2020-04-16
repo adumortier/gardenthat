@@ -9,6 +9,7 @@ class SearchController < ApplicationController
 
   def show
     result = PlantService.new.get_individual_plant_details(params['format'])
+    return @error = "Bad Plant" if result == "Bad Plant"
     @plant = ApiPlant.new(result)
   end
 end
