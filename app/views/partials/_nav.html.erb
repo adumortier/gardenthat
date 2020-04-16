@@ -1,22 +1,34 @@
-<nav class="primary_nav">
-  <ul>
-    <div class="navbar navbar-dark" style="background-color: #8FBC8F;">
-      <%= form_with(url: "/search", method: "get", local: true) do %>
-        <%= text_field_tag(:search) %>
-        <%= submit_tag("Search") %>
-      <% end %>
-
-      <li><%= link_to "Home", '/' %></li>
-      <li><%= link_to "About", about_path %></li>
-      <li> <%= link_to "Browse All Plants", '/plants' %>
+<nav class="navbar navbar-expand-lg" style="background-color: #8FBC8F;">
+  <%= form_with(url: "/search", method: "get", local: true) do %>
+    <%= text_field_tag 'search', nil, placeholder: 'Search plants...' %>
+    <%= submit_tag "Search", class: "btn btn-primary my-2 my-sm-0" %>
+  <% end %>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" <%=link_to "Home", '/'%></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to "About", about_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to "Browse All Plants", '/plants' %></a>
+      </li>
       <% if current_user %>
-        <li><%= link_to 'My Garden', '/user/mygardens'%></li>
-        <li><%= link_to 'My Profile', "/profile/#{current_user.id}" %></li>
-        <li><%= link_to 'Sign Out', '/logout', method: :delete %></li>
+        <li class="nav-item">
+          <a class="nav-link" <%= link_to 'My Garden', '/user/mygardens'%></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" <%= link_to 'My Profile', "/profile/#{current_user.id}" %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" <%= link_to 'Sign Out', '/logout', method: :delete %></a>
+        </li>
       <% else %>
-        <li><%= link_to 'Sign In', '/login', class: "px2"%></li>
+        <li class="nav-item">
+          <a class="nav-link" <%=link_to 'Sign In', '/login', class: "px2"%></a>
+        </li>
       <% end %>
-    </div>
-  </ul>
+    </ul>
+  </div>
 </nav>
-<br>

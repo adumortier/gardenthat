@@ -1,19 +1,23 @@
-/* .background-img{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  flex: 1;
-} */
+body, html {
+    height: 100%;
+}
 
-/* .welcome{
-  background-image: url("https://images.pexels.com/photos/169523/pexels-photo-169523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  height: auto;
-  width: 100%
-} */
+/* The hero image */
+.hero-image {
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
-.welcome-main{
+/* Place text in the middle of the image */
+.hero-text {
   text-align: center;
-  z-index: 1;
-  background-color: white
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: -2px -2px 0 #000, +2px +2px 0 #000, +2px -2px 0 #000, 2px 2px 0 #000;
 }
