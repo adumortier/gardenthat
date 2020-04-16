@@ -19,7 +19,7 @@ Gard(in) That is an application meant for ANY gardener. Search a selection of fr
 * [Getting Started](#getting-started)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Contact](#contact)
+* [Developer GitHub Profiles](#contact)
 * [Acknowledgements](#acknowledgements)
 
 
@@ -95,9 +95,12 @@ Future iterations will include:
 * an entire Gard(in) That community!
 
 <!-- CONTACT -->
-## Contact
+## Developer GitHub Profiles
 
-Nathan Keller - keller.nathan@gamil.com
+Paul DeBevoc - [GitHub](https://github.com/PaulDebevec)
+Alex Dumortier - [GitHub](https://github.com/adumortier)
+Nathan Keller - [GitHub](https://github.com/nkeller1)
+Will Kunz - [GitHub](https://github.com/willkunz13)
 
 Deployed Application on Heroku: [Gard(in) That!](https://gardenthat.herokuapp.com/)
 
