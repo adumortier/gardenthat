@@ -6,9 +6,9 @@ describe 'As a registered user' do
       {"provider"=>"google_oauth2",
       "uid"=>"110287008629109688070",
       "info"=>
-      {"name"=>"gardenthat",
-      "email"=>"gardenthat@gmail.com",
-      "unverified_email"=>"gardenthat@gmail.com",
+      {"name"=>"gardenthattesting",
+      "email"=>"gardenthattesting@gmail.com",
+      "unverified_email"=>"gardenthattesting@gmail.com",
       "email_verified"=>true,
       "first_name"=>"garden",
       "last_name"=>"that",
@@ -23,13 +23,13 @@ describe 'As a registered user' do
         OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(@auth)
       end
 
-    it 'it starts creating a new user with an oauth hash returned' do
+    it 'it starts creating a new user with an oauth hash returned', :vcr do
       user = User.from_omniauth(@auth)
-      expect(user.email).to eq("gardenthat@gmail.com")
-      expect(user.name).to eq("gardenthat")
+      expect(user.email).to eq("gardenthattesting@gmail.com")
+      expect(user.name).to eq("gardenthattesting")
     end
 
-    it 'it lets me sign in through google and redirects me to the welcome page only if I dont have a zip code stored' do
+    it 'it lets me sign in through google and redirects me to the welcome page only if I dont have a zip code stored', :vcr do
       visit '/'
       click_on 'Sign In'
       expect(current_path).to eq('/login')
@@ -48,6 +48,7 @@ describe 'As a registered user' do
       visit '/login'
       click_on 'Sign in with Google'
       expect(current_path).to eq('/')
+      expect(User.last.calendar_id.empty?).to eq(false) 
     end
     
 end
