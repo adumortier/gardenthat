@@ -13,6 +13,10 @@ class SessionsController < ApplicationController
     refresh_token = access_token.credentials.refresh_token
     user.google_refresh_token = refresh_token if refresh_token.present?
     user.save
+    if user.calendar_id.nil?
+      CalendarService.create_calendar(user, "GardenThatApp")
+      flash[:notice] = 'Your GardenThat calendar was created.'
+    end
     log_in(user)
     return redirect_to profile_questionaire_path if user.zip_code.nil?
     redirect_to root_path
