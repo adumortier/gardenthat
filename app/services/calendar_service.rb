@@ -31,6 +31,15 @@ class CalendarService
     result = JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.list_events(user)
+    response = conn.get('events/info?') do |req|
+      req.params['token'] = user.google_token
+      req.params['refresh_token'] = user.google_refresh_token
+      req.params['calendar_name'] = "GardenThatApp"
+    end
+    result = JSON.parse(response.body, symbolize_names: true)
+  end
+
   private 
 
   def self.conn
