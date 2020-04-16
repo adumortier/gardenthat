@@ -30,6 +30,8 @@ Rails.application.routes.draw do
 		post '/plants', to: 'plants#create'
 		get '/plants/:id/mygardens', to: 'mygardens#show', as: 'plants_mygardens'
 
+		delete '/mygardens/:id', to: 'mygardens#destroy'
+
 		namespace :mygardens do
 			post '/:garden_id/plants/:plant_id', to: 'plants#create', as: 'plants'
 		end
