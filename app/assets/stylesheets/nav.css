@@ -1,4 +1,6 @@
-
+.nav-brown-border{
+  border: 2px solid #800000;
+}
 
 ul {
   list-style-type: none;
