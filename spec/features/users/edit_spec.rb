@@ -28,5 +28,6 @@ RSpec.describe "Edit Profile " , type: :feature do
 
     expect(current_path).to eq("/profile/#{@user1.id}")
     expect(page).to have_content('80003')
+    expect(page).to have_content('Profile Updated!')
   end
 end
