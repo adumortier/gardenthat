@@ -1,54 +1,14 @@
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** github_username, repo, twitter_handle, email
--->
-
-
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/adumortier/">
+  <a href="https://github.com/adumortier">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Gard(in) That!</h3>
 
-  <p align="center">
-    YOUR_SHORT_DESCRIPTION
-    <br />
-    <a href="https://github.com/adumortier/"><strong>Explore the docs »</strong></a>
-    <br />
-    <a href="https://github.com/adumortier/">View Demo</a>
-  </p>
-</p>
-
+<p align="center">
+Gard(in) That is an application meant for ANY gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
 
 
 <!-- TABLE OF CONTENTS -->
@@ -57,10 +17,8 @@
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Contributing](#contributing)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
@@ -71,33 +29,30 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
+Gard(in) That was built on a rails framework that is linked with two different Sinatra microservices. Our plant microservice houses a database of basic plant information and is tied to GrowStuff's API (see acknowledgments section below). Our second microservice ties into Google Calendars. OAuth is also through Google. 
+
+Our Plant MicroService can be found here: https://github.com/nkeller1/plant_search
+
+Our Notification MicroService can be found here: https://github.com/adumortier/notifications
 
 
 ### Built With
 
-* []()
-* []()
-* []()
-
+* Ruby on Rails
+* Sintra
+* Deployed With Heroku
+* PostgreSQL
+* Bootstrap
+* RSpec
+* RackTest
+* Travis CI
+* A forge of amazing RubyGems
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
-
-
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
 
 ### Installation
 
@@ -109,40 +64,46 @@ git clone https://github.com/adumortier.git
 ```sh
 bundle install
 ```
-
+3. Create your environment
+```sh
+rails db:create
+rails db:migrate
+```
+4. Install Figaro
+```sh
+bundle exec figaro install
+```
+5. You will need to set up your application.yml file with your google API information
+```sh
+GOOGLE_CLIENT_ID: <YOUR KEY HERE>
+GOOGLE_CLIENT_SECRET: <YOUR KEY HERE>
+TEST_USER_GOOGLE_TOKEN: <YOUR KEY HERE>
+TEST_USER_GOOGLE_REFRESH_TOKEN: <YOUR KEY HERE>
+```
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+As a visitor, you can search for and browse the plants we currently have available. If you want to create a garden, sign up! You may create as many gardens as you wish.  If you find a plant that you want to add to a garden, navigate to the plant's detail page and click 'Add plant to my garden'. Once the plant has been added our background workers will automatically add the estimated best time to harvest your plant to your calendar. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
+Future iterations will include: 
+* a watering schedule for the plants in your garden(s). 
+* recommendations based on your location
+* suggestions based on the plants you already have in your garden
+* a 'Tips' section on how to get the most out of your garden
+* an entire Gard(in) That community!
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Nathan Keller - keller.nathan@gamil.com
 
-Project Link: [https://github.com/github_username/repo](https://github.com/github_username/repo)
-
+Deployed Application on Heroku: [Gard(in) That!](https://gardenthat.herokuapp.com/)
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
+* [GrowStuff.org](https://www.growstuff.org/)
+* [Google Dev](https://console.developers.google.com/)
