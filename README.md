@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://gardenthat.herokuapp.com/">
-    <img src="app/assets/images/logo.png" alt="Logo" width="120" height="120">
+    <img src="app/assets/images/logo.png" alt="Logo" width="120" height="110">
   </a>
   
   <h1 align="center">Gard(in) That!</h1> <br><br>
@@ -113,10 +113,10 @@ Create a new calendar:
 POST https://notificationmicroservice.herokuapp.com/calendar/new?token=<your_google_token_here>&refresh_token=<your_google_refresh_token_here>&calendar_name=<calendar_name_here>
 ```
 
-Create a new event:
+Create a new event (date format yyyy-mm-dd):
 ```sh
 POST https://notificationmicroservice.herokuapp.com/event/new?token=<your_google_token_here>&refresh_token=<your_google_refresh_token_here>&name=<event_name_here>&description=<event_description_here>&date=<date_here>
-[date format yyyy-mm-dd]
+
 ```
 Delete an event:
 ```
