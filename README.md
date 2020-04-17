@@ -1,8 +1,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/adumortier">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://gardenthat.herokuapp.com/">
+    <img src="http://pureimg.com/public/uploads/large/241498764339cigllzrqdmwcdvdfqlnvthbmmfjytjttwf0qxzg2b5p6kevggmjzkyixvbv7nhdj3qhz3xyvydqcyjp85mietxfj9mvbs1bgytyl.jpg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Gard(in) That!</h3>
@@ -19,7 +19,6 @@ Gard(in) That is an application meant for ANY gardener. Search a selection of fr
 * [Getting Started](#getting-started)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
 
@@ -27,7 +26,7 @@ Gard(in) That is an application meant for ANY gardener. Search a selection of fr
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<a href="https://ibb.co/fpgZSxG"><img src="https://i.ibb.co/FwrcWDq/Screen-Shot-2020-04-16-at-5-27-44-PM.png" alt="Screen-Shot-2020-04-16-at-5-27-44-PM" border="0"></a>
 
 Gard(in) That was built on a rails framework that is linked with two different Sinatra microservices. Our plant microservice houses a database of basic plant information and is tied to GrowStuff's API (see acknowledgments section below). Our second microservice ties into Google Calendars. OAuth is also through Google. 
 
@@ -94,16 +93,18 @@ Future iterations will include:
 * a 'Tips' section on how to get the most out of your garden
 * an entire Gard(in) That community!
 
-<!-- CONTACT -->
-## Contact
-
-Nathan Keller - keller.nathan@gamil.com
-
-Deployed Application on Heroku: [Gard(in) That!](https://gardenthat.herokuapp.com/)
-
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
 * [GrowStuff.org](https://www.growstuff.org/)
 * [Google Dev](https://console.developers.google.com/)
+
+## Developer GitHub Profiles
+
+Paul DeBevoc - [GitHub](https://github.com/PaulDebevec) <br>
+Alex Dumortier - [GitHub](https://github.com/adumortier)<br>
+Nathan Keller - [GitHub](https://github.com/nkeller1)<br>
+Will Kunz - [GitHub](https://github.com/willkunz13)<br>
+
+Deployed Application on Heroku: [Gard(in) That!](https://gardenthat.herokuapp.com/)

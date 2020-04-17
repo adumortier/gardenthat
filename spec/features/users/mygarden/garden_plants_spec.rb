@@ -20,7 +20,7 @@ RSpec.describe "As a registered user " , type: :feature do
     it "View Garden Plants", :vcr do
 			@garden.plants << @plant
       visit "/user/mygardens"
-      click_link "Garden 1"
+      click_link "Garden Details"
       expect(current_path).to eq("/user/mygardens/#{@garden.id}")
       expect(page).to have_content("#{@garden.name}")
       expect(page).to have_link("Tomato")
@@ -28,7 +28,7 @@ RSpec.describe "As a registered user " , type: :feature do
 
 		it "Catch no plants", :vcr do
 			visit "/user/mygardens"
-      click_link "Garden 1"
+      click_link "Garden Details"
       expect(current_path).to eq("/user/mygardens/#{@garden.id}")
       expect(page).to have_content('plants in this garden. Find something you would like to grow and add them to keep track of what you have')
 		end
@@ -41,7 +41,7 @@ RSpec.describe "As a registered user " , type: :feature do
 			click_on "Add to MyGarden"
 			plant = Plant.last
 			expect(current_path).to eq("/user/plants/#{plant.id}/mygardens")
-			click_link 'Garden 1'
+			click_link 'Garden Details'
 			expect(page).to have_content("tomato")
       expect(page).to have_content("We're updating your calendar with the harvest time of your tomato")
 
