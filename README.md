@@ -23,7 +23,6 @@ Gard(in) That is an application meant for ANY gardener. Search a selection of fr
 * [Acknowledgements](#acknowledgements)
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -35,7 +34,7 @@ Our Plant MicroService can be found here: https://github.com/nkeller1/plant_sear
 
 Our Notification MicroService can be found here: https://github.com/adumortier/notifications
 
-<p align="center">
+
 ![alt text](app/assets/images/demo_gardenthat.gif)
 
 ### Built With
@@ -85,7 +84,9 @@ GOOGLE_CLIENT_SECRET: <YOUR KEY HERE>
 TEST_USER_GOOGLE_TOKEN: <YOUR KEY HERE>
 TEST_USER_GOOGLE_REFRESH_TOKEN: <YOUR KEY HERE>
 ```
+6. Push your keys to Heroku 
 
+`figaro heroku:set -e production`
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -109,7 +110,7 @@ Future iterations will include:
 ## Developer GitHub Profiles
 
 Paul Debevec - [GitHub](https://github.com/PaulDebevec) <br>
-Alex Dumortier - [GitHub](https://github.com/adumortier)<br>
+Alexis Dumortier - [GitHub](https://github.com/adumortier)<br>
 Nathan Keller - [GitHub](https://github.com/nkeller1)<br>
 Will Kunz - [GitHub](https://github.com/willkunz13)<br>
 
