@@ -157,7 +157,7 @@ Future iterations will include:
 
 * [GrowStuff.org](https://www.growstuff.org/)
 * [Google Dev](https://console.developers.google.com/)
-* Gabz for designing the Gard(in)That logo! 
+* Gabz Cirbo for designing the Gard(in)That logo! 
 
 ## Developer GitHub Profiles
 
