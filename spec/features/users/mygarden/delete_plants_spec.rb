@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "As a user " , type: :feature do 
+RSpec.describe "As a user " , type: :feature do
 
-  describe "When I visit one of my gardens" do 
+  describe "When I visit one of my gardens" do
 
-    before(:each) do 
+    before(:each) do
        @user1 = User.create!( email: 'gardenthattesting@gmail.com',
                             name: 'gardenthattesting',
                             zip_code: '02300',
@@ -19,20 +19,19 @@ RSpec.describe "As a user " , type: :feature do
       @garden.plants << @plant2
     end
 
-    it "I can delete the plants in my garden" do 
-
+    it "I can delete the plants in my garden" do
 
       expect(GardenPlant.where("garden_id= #{@garden.id} AND plant_id= #{@plant1.id}")).to_not be_empty
       expect(GardenPlant.where("garden_id= #{@garden.id} AND plant_id= #{@plant2.id}")).to_not be_empty
-      
+
       visit "/user/mygardens/#{@garden.id}"
-      within("div#plant-#{@plant1.id}") do
+      within(".plant-#{@plant1.id}") do
         click_link "Delete"
       end
 
       expect(GardenPlant.where("garden_id= #{@garden.id} AND plant_id= #{@plant1.id}")).to be_empty
       expect(GardenPlant.where("garden_id= #{@garden.id} AND plant_id= #{@plant2.id}")).to_not be_empty
-    
+
     end
 
   end

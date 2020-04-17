@@ -49,7 +49,7 @@ RSpec.describe "Plant Search Page" , type: :feature do
       expect(page).to have_link('Login With Google to Add to your Garden!')
     end
 
-    it 'displays error message if not details on the plant are avaiable', :vcr do
+    it 'displays error message if no details on the plant are avaiable', :vcr do
       user1 = User.create!( email: 'gardenthat@gmail.com',
                             name: 'gardenthat',
                             zip_code: '02300',
@@ -67,7 +67,7 @@ RSpec.describe "Plant Search Page" , type: :feature do
         click_on 'Roma tomato'
       end
 
-      expect(current_path).to eq('/search/details.roma-tomato')
+      expect(current_path).to eq('/search/details.Roma%20tomato')
       expect(page).to have_content('We are sorry, no details currently avaiable for this plant. Check back soon.')
     end
 end
