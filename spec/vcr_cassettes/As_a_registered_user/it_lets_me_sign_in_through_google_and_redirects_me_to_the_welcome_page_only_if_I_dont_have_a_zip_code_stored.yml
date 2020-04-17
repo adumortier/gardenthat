@@ -17,30 +17,26 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 500
-      message: 'Internal Server Error '
+      code: 200
+      message: 'OK '
     headers:
       Connection:
       - keep-alive
       Content-Type:
-      - text/html;charset=utf-8
+      - application/json
       Content-Length:
-      - '30'
-      X-Xss-Protection:
-      - 1; mode=block
+      - '84'
       X-Content-Type-Options:
       - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 16 Apr 2020 17:41:33 GMT
+      - Fri, 17 Apr 2020 01:02:36 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: "<h1>Internal Server Error</h1>"
+      string: '{"name":"GardenThatApp","id":"no5nrau9mnuut1420lotg7eu54@group.calendar.google.com"}'
     http_version: null
-  recorded_at: Thu, 16 Apr 2020 17:41:33 GMT
+  recorded_at: Fri, 17 Apr 2020 01:02:33 GMT
 recorded_with: VCR 5.1.0

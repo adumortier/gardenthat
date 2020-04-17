@@ -9,7 +9,8 @@ RSpec.describe "As a registered user " , type: :feature do
                             name: 'gardenthattesting',
                             zip_code: '02300',
                             google_token: ENV['TEST_USER_GOOGLE_TOKEN'],
-                            google_refresh_token: ENV['TEST_USER_GOOGLE_REFRESH_TOKEN']
+                            google_refresh_token: ENV['TEST_USER_GOOGLE_REFRESH_TOKEN'],
+                            calendar_id: '5n59q0ueh4202i4mlstfbqejgc@group.calendar.google.com'
                           )
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
 			@garden = Garden.create(name: 'Garden 1', user: @user1)
@@ -32,18 +33,24 @@ RSpec.describe "As a registered user " , type: :feature do
       expect(page).to have_content('plants in this garden. Find something you would like to grow and add them to keep track of what you have')
 		end
 
-    xit "Add plant", :vcr do
-      CalendarService.create_calendar(@user1, "testing")
+    it "Add plant", :vcr do
 			visit '/'
 			fill_in "search", with: "tomato"
 			click_on "Search"
 			click_on "Tomato"
 			click_on "Add to MyGarden"
 			plant = Plant.last
-			expect(current_path).to eq("/user/plants/#{plant.id}/mygardens")
-			click_link 'Garden Details'
+      expect(current_path).to eq("/user/plants/#{plant.id}/mygardens")
+      click_link "Garden 1"
+
 			expect(page).to have_content("tomato")
-      expect(page).to have_content("We've updated your calendar with the harvest time of your tomato")
+      expect(page).to have_content("We're updating your calendar with the harvest time of your tomato")
+
+      visit "/user/mygardens/#{@garden.id}"
+
+      within("div#plant-#{@user1.gardens.first.plants.first.id}") do
+        click_link "Delete"
+      end
     end
   end
 end
