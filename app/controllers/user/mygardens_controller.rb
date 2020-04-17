@@ -1,6 +1,6 @@
 class User::MygardensController < User::BaseController 
 	def index
-		@gardens = User.find(current_user.id).gardens
+		render locals: {gardens: User.find(current_user.id).gardens}
 	end
 
 	def new
