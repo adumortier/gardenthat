@@ -105,7 +105,7 @@ bundle exec rspec
 ```
 ### Notification Microservice Access Points 
 
-Retrieve the events from the GardenThatApp:
+Retrieve the events from the GardenThatApp calendar:
 ```sh
 GET https://notificationmicroservice.herokuapp.com/events/info?token=<your_google_token_here>&refresh_token=<your_google_refresh_token_here>&calendar_name=GardenThatApp
 ```
