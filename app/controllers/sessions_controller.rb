@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class SessionsController < ApplicationController
+  
   def destroy
     session[:user_id] = nil
     redirect_to root_path
@@ -8,10 +9,7 @@ class SessionsController < ApplicationController
 
   def googleAuth
     access_token = request.env['omniauth.auth']
-    user = User.from_omniauth(access_token)
-    user.google_token = access_token.credentials.token
-    refresh_token = access_token.credentials.refresh_token
-    user.google_refresh_token = refresh_token if refresh_token.present?
+    user = set_user_tokens(access_token)
     user.save
     if user.calendar_id.nil?
       CalendarService.create_calendar(user, "GardenThatApp")
@@ -21,4 +19,13 @@ class SessionsController < ApplicationController
     return redirect_to profile_questionaire_path if user.zip_code.nil?
     redirect_to root_path
   end
+
+  def set_user_tokens(access_token)
+    user = User.from_omniauth(access_token)
+    user.google_token = access_token.credentials.token
+    refresh_token = access_token.credentials.refresh_token
+    user.google_refresh_token = refresh_token if refresh_token.present?
+    return user
+  end
+
 end
