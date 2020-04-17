@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class PlantsController < ApplicationController
   def index
-    conn = Faraday.new "https://plantmicroservice.herokuapp.com/allplants"
+    conn = Faraday.new 'https://plantmicroservice.herokuapp.com/allplants'
     response = conn.get
     json = JSON.parse(response.body, symbolize_names: true)
 
@@ -8,6 +10,6 @@ class PlantsController < ApplicationController
       ApiPlant.new(plant)
     end
 
-    @plants = plants.paginate(:page => params[:page], :per_page => 24)
+    @plants = plants.paginate(page: params[:page], per_page: 24)
   end
 end

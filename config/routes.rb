@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'welcome#index'
   get '/about', to: 'about#show'
@@ -21,19 +23,19 @@ Rails.application.routes.draw do
 
   get '/plants', to: 'plants#index'
 
-	namespace :user do
-		get '/mygardens', to: 'mygardens#index'
-		get '/mygardens/new', to: 'mygardens#new'
-		post '/mygardens', to: 'mygardens#create'
-		get '/mygardens/:id', to: 'mygardens/plants#index'
+  namespace :user do
+    get '/mygardens', to: 'mygardens#index'
+    get '/mygardens/new', to: 'mygardens#new'
+    post '/mygardens', to: 'mygardens#create'
+    get '/mygardens/:id', to: 'mygardens/plants#index'
     delete '/mygardens/:garden_id/plants/:plant_id', to: 'mygardens/plants#destroy'
-		post '/plants', to: 'plants#create'
-		get '/plants/:id/mygardens', to: 'mygardens#show', as: 'plants_mygardens'
+    post '/plants', to: 'plants#create'
+    get '/plants/:id/mygardens', to: 'mygardens#show', as: 'plants_mygardens'
 
-		delete '/mygardens/:id', to: 'mygardens#destroy'
+    delete '/mygardens/:id', to: 'mygardens#destroy'
 
-		namespace :mygardens do
-			post '/:garden_id/plants/:plant_id', to: 'plants#create', as: 'plants'
-		end
-	end
+    namespace :mygardens do
+      post '/:garden_id/plants/:plant_id', to: 'plants#create', as: 'plants'
+    end
+  end
 end

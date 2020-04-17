@@ -1,0 +1,43 @@
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  Exclude:
+    - 'generated/**/*.rb'
+
+Style/For:
+  Exclude:
+    - bar.rb
+Style/Documentation:
+  Enabled: false 
+
+Metrics/MethodLength:
+  Max: 20
+
+Layout/LineLength:
+  Max: 120
+
+Style/ClassAndModuleChildren:
+  Enabled: false 
+
+Lint/UselessAssignment:
+  Enabled: false
+
+Lint/UselessAccessModifier:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 25
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'Gemfile/**/*'
+    - 'bin/**/*'
+    - 'spec/**/*'
+    - 'script/**/*'
+    - 'bin/{rails,rake}'
+    - !ruby/regexp /old_and_unused\.rb$/
+

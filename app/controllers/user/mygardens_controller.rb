@@ -1,37 +1,38 @@
-class User::MygardensController < User::BaseController 
-	def index
-		@gardens = User.find(current_user.id).gardens
-	end
+# frozen_string_literal: true
 
-	def new
-	end
+class User::MygardensController < User::BaseController
+  def index
+    @gardens = User.find(current_user.id).gardens
+  end
 
-	def show
-		@plant = Plant.find(params[:id])
-	end
+  def new; end
 
-	def create
-		garden = current_user.gardens.create(garden_params)
-		if garden.save
-			redirect_to '/user/mygardens'
-		else
-			flash[:notice] = "Your new garden needs a name"
-			redirect_back(fallback_location: '/')
-		end
-	end
+  def show
+    @plant = Plant.find(params[:id])
+  end
 
-	def destroy
-		garden = Garden.find(params[:id]).destroy
-		redirect_to('/user/mygardens')
-	end
+  def create
+    garden = current_user.gardens.create(garden_params)
+    if garden.save
+      redirect_to '/user/mygardens'
+    else
+      flash[:notice] = 'Your new garden needs a name'
+      redirect_back(fallback_location: '/')
+    end
+  end
 
-	private
+  def destroy
+    garden = Garden.find(params[:id]).destroy
+    redirect_to('/user/mygardens')
+  end
 
-	def garden_params
-		params.permit(:name, 
-			:address,
-			:city,
-			:state,
-			:zip)
-	end
+  private
+
+  def garden_params
+    params.permit(:name,
+                  :address,
+                  :city,
+                  :state,
+                  :zip)
+  end
 end

@@ -1,17 +1,17 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Edit Profile " , type: :feature do
+RSpec.describe 'Edit Profile ', type: :feature do
   before(:each) do
-    @user1 = User.create!( email: 'gardenthat@gmail.com',
+    @user1 = User.create!(email: 'gardenthat@gmail.com',
                           name: 'gardenthat',
                           zip_code: '02300',
                           google_token: 'temp',
-                          google_refresh_token: 'temp'
-                        )
-
+                          google_refresh_token: 'temp')
   end
 
-  it "can successfully edit thier profile" do
+  it 'can successfully edit thier profile' do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
 
     visit "/profile/#{@user1.id}"
@@ -22,7 +22,7 @@ RSpec.describe "Edit Profile " , type: :feature do
 
     expect(page).to have_selector("input[value='02300']")
 
-    fill_in :zip_code, with: "80003"
+    fill_in :zip_code, with: '80003'
 
     click_button 'Update Profile'
 

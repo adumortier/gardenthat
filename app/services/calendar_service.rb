@@ -1,5 +1,6 @@
-class CalendarService
+# frozen_string_literal: true
 
+class CalendarService
   def self.post_events(user, title, description, date)
     response = conn.post('event/new?') do |req|
       req.params['token'] = user.google_token
@@ -9,7 +10,7 @@ class CalendarService
       req.params['description'] = description
       req.params['date'] = date
     end
-    return JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.create_calendar(user, calendar_name)
@@ -35,7 +36,7 @@ class CalendarService
     response = conn.get('events/info?') do |req|
       req.params['token'] = user.google_token
       req.params['refresh_token'] = user.google_refresh_token
-      req.params['calendar_name'] = "GardenThatApp"
+      req.params['calendar_name'] = 'GardenThatApp'
     end
     result = JSON.parse(response.body, symbolize_names: true)
   end
@@ -49,10 +50,9 @@ class CalendarService
     end
   end
 
-  private 
+  private
 
   def self.conn
     Faraday.new 'https://notificationmicroservice.herokuapp.com'
   end
-
 end

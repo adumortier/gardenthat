@@ -1,11 +1,11 @@
-class ProfilesController < ApplicationController
+# frozen_string_literal: true
 
-  def new
-  end
+class ProfilesController < ApplicationController
+  def new; end
 
   def show
     if current_user.nil?
-      render file: "/public/404"
+      render file: '/public/404'
     else
       @user = User.find(current_user.id)
     end
@@ -24,9 +24,7 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    if current_user
-      current_user.update(user_params)
-    end
+    current_user&.update(user_params)
     redirect_to root_path
   end
 
@@ -34,12 +32,12 @@ class ProfilesController < ApplicationController
     User.find(params[:id]).destroy
     session.clear
     redirect_to '/'
-    flash[:alert] = "Profile Deleted"
+    flash[:alert] = 'Profile Deleted'
   end
 
   private
 
-    def user_params
-      params.permit(:zip_code, :name)
-    end
+  def user_params
+    params.permit(:zip_code, :name)
+  end
 end

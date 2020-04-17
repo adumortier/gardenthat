@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 require 'simplecov'
@@ -5,16 +7,16 @@ SimpleCov.start
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+if Rails.env.production?
+  abort('The Rails environment is running in production mode!')
+end
 require 'rspec/rails'
-
-
 
 require 'vcr'
 require 'webmock/rspec'
 
 VCR.configure do |config|
-  config.cassette_library_dir = "spec/vcr_cassettes"
+  config.cassette_library_dir = 'spec/vcr_cassettes'
   config.hook_into :webmock
   # config.filter_sensitive_data('<PROPUBLICA_API_KEY>') { ENV['PROPUBLICA_API_KEY'] }
   config.configure_rspec_metadata!

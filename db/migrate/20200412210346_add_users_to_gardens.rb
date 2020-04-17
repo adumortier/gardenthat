@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddUsersToGardens < ActiveRecord::Migration[5.2]
   def change
     add_reference :gardens, :user, foreign_key: true

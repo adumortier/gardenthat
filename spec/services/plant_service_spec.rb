@@ -1,8 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-
-RSpec.describe 'plant service index', :type => :request do
-
+RSpec.describe 'plant service index', type: :request do
   before do
     get '/search', params: { 'search' => 'tomato' }
   end
@@ -12,8 +12,7 @@ RSpec.describe 'plant service index', :type => :request do
   end
 end
 
-describe 'plant service show', :type => :request do
-
+describe 'plant service show', type: :request do
   before do
     get '/search/details', params: { 'format' => 'tomato' }
   end

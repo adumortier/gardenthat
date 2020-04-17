@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Browse All Plants Page" , type: :feature do
-  it "can list all avaiable plants to browse", :vcr do
+RSpec.describe 'Browse All Plants Page', type: :feature do
+  it 'can list all avaiable plants to browse', :vcr do
     visit '/'
 
     click_on 'Browse All Plants'

@@ -1,5 +1,6 @@
-class ApiPlant
+# frozen_string_literal: true
 
+class ApiPlant
   attr_reader :name,
               :perennial,
               :first_harvest,
@@ -30,7 +31,7 @@ class ApiPlant
 
   def default_image(image)
     if image.nil?
-      image = "https://www.aisd.net/burgin-elementary/wp-content/files/sites/54/2018/08/No-image-available.jpg"
+      image = 'https://www.aisd.net/burgin-elementary/wp-content/files/sites/54/2018/08/No-image-available.jpg'
     else
       image
     end
