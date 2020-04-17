@@ -143,9 +143,9 @@ Future iterations will include:
 
 ## Developer GitHub Profiles
 
-Paul Debevec - [GitHub](https://github.com/PaulDebevec) <br>
-Alexis Dumortier - [GitHub](https://github.com/adumortier)<br>
-Nathan Keller - [GitHub](https://github.com/nkeller1)<br>
-Will Kunz - [GitHub](https://github.com/willkunz13)<br>
+* Paul Debevec - [GitHub](https://github.com/PaulDebevec) <br>
+* Alexis Dumortier - [GitHub](https://github.com/adumortier)<br>
+* Nathan Keller - [GitHub](https://github.com/nkeller1)<br>
+* Will Kunz - [GitHub](https://github.com/willkunz13)<br>
 
 Deployed Application on Heroku: [Gard(in) That!](https://gardenthat.herokuapp.com/)
