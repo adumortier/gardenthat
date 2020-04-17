@@ -15,4 +15,11 @@ class PlantService
     response = conn.get("/api/#{request}")
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def get_all_plants
+    response = conn.get('allplants')
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+
 end
