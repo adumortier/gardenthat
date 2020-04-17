@@ -48,8 +48,7 @@ Our Notification MicroService can be found here: https://github.com/adumortier/n
 * Travis CI
 * A forge of amazing RubyGems
 
-<!-- SCHEMA -->
-### Schema Design
+### Schema
 
 ![alt text](app/assets/images/schema.png)
 
