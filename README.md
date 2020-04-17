@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://gardenthat.herokuapp.com/">
-    <img src="app/assets/images/logo.png" alt="Logo" >
+    <img src="app/assets/images/logo.png" alt="Logo" width="180" height="180">
   </a>
   
   <h3 align="center">Gard(in) That!</h3>
