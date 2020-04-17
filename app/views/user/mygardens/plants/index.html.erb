@@ -1,11 +1,11 @@
 <center>
 	<div class="jumbotron jumbotron-fluid">
-	<h2><%= @garden.name %></h2>
-<% if @garden.plants.empty? %>
+	<h2><%= garden.name %></h2>
+<% if garden.plants.empty? %>
 	<h3> No plants in this garden. Find something you would like to grow and add them to keep track of what you have planted </h3>
 <% else %>
 <div class="container-1">
-	<% @garden.plants.each do |plant| %>
+	<% garden.plants.each do |plant| %>
 	<div class="cards">
 		<div class="cards__item">
 		<div class="card" style="width: 18rem;">
@@ -21,7 +21,7 @@
 				<% else %>
 				<p>No description currently available</p>
 				<% end %>
-				<div class="delete-plant-<%=plant.id%>"><%= link_to "Delete From Garden", user_mygardens_plants_path(@garden.id, plant.id), method: :delete, data: {confirm: "Are you sure?"} %></div>
+				<div class="delete-plant-<%=plant.id%>"><%= link_to "Delete From Garden", user_mygardens_plants_path(garden.id, plant.id), method: :delete, data: {confirm: "Are you sure?"} %></div>
 			</div>
 		</div>
 	</div>
