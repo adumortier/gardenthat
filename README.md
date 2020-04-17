@@ -43,6 +43,7 @@ Our Notification MicroService can be found here: https://github.com/adumortier/n
 * Testing: RSpec, RackTest, SimpleCov, Capybara (test coverage > 90%.)
 * Front-End Design: Bootstrap
 * Continuous Integration: Travis CI
+* Project Management: Trello
 * ... and a forge of amazing RubyGems!
 
 ### Schema
@@ -73,11 +74,13 @@ rails db:migrate
 ```sh
 bundle exec figaro install
 ```
-5. You will need to set up your application.yml file with your google API information
+5. Register your app with [Google](https://console.developers.google.com/) to receive your `client_id` and `client_secret` 
+
+Your `client_id` and `client_secret` keys can be stored securely in the `application.yml` file of your `app/config` directory.
 ```sh
-GOOGLE_CLIENT_ID: <YOUR KEY HERE>
-GOOGLE_CLIENT_SECRET: <YOUR KEY HERE>
-TEST_USER_GOOGLE_TOKEN: <YOUR KEY HERE>
+GOOGLE_CLIENT_ID: <YOUR CLIENT_ID HERE>
+GOOGLE_CLIENT_SECRET: <YOUR CLIENT_SECRET HERE>
+TEST_USER_GOOGLE_TOKEN: <YOUR KEY HERE>    
 TEST_USER_GOOGLE_REFRESH_TOKEN: <YOUR KEY HERE>
 ```
 6. Add your keys to your app on Heroku 
