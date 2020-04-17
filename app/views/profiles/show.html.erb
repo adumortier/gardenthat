@@ -1,6 +1,13 @@
-<h1>Name: <%= @user.name %></h1>
-<h4>Email: <%= @user.email %></h4>
-<h4>Zip Code: <%= @user.zip_code %></h4>
-<%= link_to "Edit Profile", "/profile/#{@user.id}/edit" %>
-<br><br><br>
-<%= link_to "Delete Profile", "/profile/#{@user.id}", method: :delete, data: {confirm: "Are you sure?"}%>
+
+<div class="hero-image">
+  <img src="https://s3.envato.com/files/281866837/Banner_Gardering_48.jpg" width="100%">
+  <div class="hero-text-position">
+        <div class="card bg-light mb-3" style="width:30rem;">
+            <div class="card-body"><h4>Name: <%= @user.name %></h4></div>
+            <div class="card-body"><h4>Email: <%= @user.email %></h4></div>
+            <div class="card-body"><h4>Zip Code: <%= @user.zip_code %></h4></div>
+            <div class="card-body"><%= link_to "Edit Profile", "/profile/#{@user.id}/edit" %></div>
+            <div class="card-body"><%= link_to "Delete Profile", "/profile/#{@user.id}", method: :delete, data: {confirm: "Are you sure?"}%></div>
+        </div>
+  </div>
+</div>

@@ -25,7 +25,7 @@ class ProfilesController < ApplicationController
 
   def create
     if current_user
-      current_user.update(zip_code: params["zip_code"])
+      current_user.update(user_params)
     end
     redirect_to root_path
   end
@@ -40,6 +40,6 @@ class ProfilesController < ApplicationController
   private
 
     def user_params
-      params.permit(:zip_code)
+      params.permit(:zip_code, :name)
     end
 end

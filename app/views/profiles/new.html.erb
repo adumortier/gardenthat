@@ -1,7 +1,17 @@
 
-<h3>Tell us more about you! </h3>
-<%= form_with(url: "/profile", method: "post", local: true) do %>
-  <%= label_tag(:zip_code, "Please enter your zip code:") %>
-  <%= text_field_tag(:zip_code) %>
-  <%= submit_tag("Send") %>
-<% end %>
+<div class="hero-image">
+  <img src="https://s3.envato.com/files/281866837/Banner_Gardering_48.jpg" width="100%">
+  <div class="hero-text-position">
+      <div class="card bg-light mb-3" style="width:30rem;"><br>
+        <div class="card-body"><h2>Tell us more about you!</h2></div>
+        <%= form_with(url: "/profile", method: "post", local: true) do %>
+          <p><%= label_tag(:zip_code, "Please enter your name and zip code for your profile") %></p>
+          <%= label_tag(:name, "Name:") %>
+          <%= text_field_tag(:name) %><br>
+          <%= label_tag(:zip_code, "Zip Code:") %>
+          <%= number_field_tag(:zip_code) %><br>
+          <%= submit_tag("Submit") %><br><br><br>
+        <% end %>
+    </div>
+  </div>
+</div>

@@ -8,6 +8,6 @@ class PlantsController < ApplicationController
       ApiPlant.new(plant)
     end
 
-    @plants = plants.paginate(:page => params[:page], :per_page => 25)
+    @plants = plants.paginate(:page => params[:page], :per_page => 24)
   end
 end
