@@ -36,6 +36,8 @@ Our Plant MicroService can be found here: https://github.com/nkeller1/plant_sear
 Our Notification MicroService can be found here: https://github.com/adumortier/notifications
 
 
+![alt text](app/assets/images/demo_gardenthat.gif)
+
 ### Built With
 
 * Ruby on Rails
