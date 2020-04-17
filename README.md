@@ -123,8 +123,9 @@ Delete an event:
 ```
 DELETE https://notificationmicroservice.herokuapp.com/event/info?token=<your_google_token_here>&refresh_token=<your_google_refresh_token_here>&calendar_id=<calendar_id_here>&event_id=<event_id_here>
 ```
+### Plant Microservice Access Points 
 
-Get All Avaiable Plants:
+Get All Available Plants:
 ```
 GET https://plantmicroservice.herokuapp.com/allplants
 ```
@@ -156,6 +157,7 @@ Future iterations will include:
 
 * [GrowStuff.org](https://www.growstuff.org/)
 * [Google Dev](https://console.developers.google.com/)
+* Gabz for designing the Gard(in)That logo! 
 
 ## Developer GitHub Profiles
 
