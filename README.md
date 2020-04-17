@@ -84,8 +84,9 @@ TEST_USER_GOOGLE_TOKEN: <YOUR KEY HERE>
 TEST_USER_GOOGLE_REFRESH_TOKEN: <YOUR KEY HERE>
 ```
 6. Add your keys to your app on Heroku 
-
-`figaro heroku:set -e production`
+```sh
+figaro heroku:set -e production
+```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
