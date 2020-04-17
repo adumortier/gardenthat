@@ -102,7 +102,7 @@ Future iterations will include:
 
 ## Developer GitHub Profiles
 
-Paul DeBevoc - [GitHub](https://github.com/PaulDebevec) <br>
+Paul Debevec - [GitHub](https://github.com/PaulDebevec) <br>
 Alex Dumortier - [GitHub](https://github.com/adumortier)<br>
 Nathan Keller - [GitHub](https://github.com/nkeller1)<br>
 Will Kunz - [GitHub](https://github.com/willkunz13)<br>
