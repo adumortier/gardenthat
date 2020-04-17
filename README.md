@@ -124,6 +124,21 @@ Delete an event:
 DELETE https://notificationmicroservice.herokuapp.com/event/info?token=<your_google_token_here>&refresh_token=<your_google_refresh_token_here>&calendar_id=<calendar_id_here>&event_id=<event_id_here>
 ```
 
+Get All Avaiable Plants:
+```
+GET https://plantmicroservice.herokuapp.com/allplants
+```
+
+Query One Plant:
+```
+GET https://plantmicroservice.herokuapp.com/plant/REQUEST 
+```
+
+Get a selection of 10 results that match a partial:
+```
+GET https://plantmicroservice.herokuapp.com/api/REQUEST 
+```
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
