@@ -5,7 +5,7 @@
     <img src="app/assets/images/logo.png" alt="Logo" width="180" height="180">
   </a>
   
-  <h3 align="center">Gard(in) That!</h3>
+  <h2 align="center">Gard(in) That!</h2>
 
 Gard(in)That is an application meant for ANY gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
 
