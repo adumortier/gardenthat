@@ -40,13 +40,14 @@ RSpec.describe "As a registered user " , type: :feature do
 			click_on "Tomato"
 			click_on "Add to MyGarden"
 			plant = Plant.last
-			expect(current_path).to eq("/user/plants/#{plant.id}/mygardens")
-			click_link 'Garden Details'
+      expect(current_path).to eq("/user/plants/#{plant.id}/mygardens")
+      click_link "Garden 1"
+
 			expect(page).to have_content("tomato")
       expect(page).to have_content("We're updating your calendar with the harvest time of your tomato")
 
       visit "/user/mygardens/#{@garden.id}"
-      
+
       within("div#plant-#{@user1.gardens.first.plants.first.id}") do
         click_link "Delete"
       end
