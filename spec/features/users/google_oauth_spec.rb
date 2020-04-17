@@ -37,7 +37,7 @@ describe 'As a registered user' do
       expect(User.last.zip_code.nil?).to eq(true)
       expect(current_path).to eq('/profile/questionaire')
       fill_in :zip_code, with: '02139'
-      click_on 'Send'
+      click_on 'Submit'
       expect(current_path).to eq('/')
       expect(User.last.zip_code).to eq('02139')
       expect(page).to_not have_link('Sign in')
