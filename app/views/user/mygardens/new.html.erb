@@ -1,9 +1,14 @@
-<%= render partial: 'form', locals:{path: '/user/mygardens',
-                                      method: :post,
-                                      button_text: 'Create Garden',
-                                      name: nil,
-                                      address: nil,
-                                      city: nil,
-                                      state: nil,
-                                      zip: nil
-                                    }%>
+  <div class="hero-text-position">
+      <div class="card bg-light mb-3" style="width:30rem;"><br>
+        <div class="card-body"><h2>Create Your Garden</h2></div>
+        <div class="card-body"><%= render partial: 'form', locals:{path: '/user/mygardens',
+                                              method: :post,
+                                              button_text: 'Create Garden',
+                                              name: nil,
+                                              address: nil,
+                                              city: nil,
+                                              state: nil,
+                                              zip: nil
+                                            }%></div>
+    </div>
+  </div>

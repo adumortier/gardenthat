@@ -16,6 +16,7 @@ Gard(in) That is an application meant for ANY gardener. Search a selection of fr
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+  * [Schema](#schema)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
 * [Usage](#usage)
@@ -47,6 +48,9 @@ Our Notification MicroService can be found here: https://github.com/adumortier/n
 * Travis CI
 * A forge of amazing RubyGems
 
+### Schema
+
+![alt text](app/assets/images/schema.png)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -102,7 +106,7 @@ Future iterations will include:
 
 ## Developer GitHub Profiles
 
-Paul DeBevoc - [GitHub](https://github.com/PaulDebevec) <br>
+Paul Debevec - [GitHub](https://github.com/PaulDebevec) <br>
 Alex Dumortier - [GitHub](https://github.com/adumortier)<br>
 Nathan Keller - [GitHub](https://github.com/nkeller1)<br>
 Will Kunz - [GitHub](https://github.com/willkunz13)<br>

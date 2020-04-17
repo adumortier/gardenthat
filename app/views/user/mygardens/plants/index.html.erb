@@ -1,15 +1,33 @@
-<button type="button" class="btn btn-primary btn-lg btn-block"><%= @garden.name %></button>
+<center>
+	<div class="jumbotron jumbotron-fluid">
+	<h2><%= @garden.name %></h2>
 <% if @garden.plants.empty? %>
-	<h3> No plants in this garden.  Find something you would like to grow and add them to keep track of what you have planted </h3>
+	<h3> No plants in this garden. Find something you would like to grow and add them to keep track of what you have planted </h3>
 <% else %>
+<div class="container-1">
 	<% @garden.plants.each do |plant| %>
-		<div class="card" id="plant-<%=plant.id%>">
-      <div class="card-body">
-      <h5 class='card-title'> <div class= 'name'> <%= link_to plant.name.capitalize, search_details_path(plant.name) %> </div> </h5>
-      <div class='image'><%= image_tag(plant.image, height:'100', width: '150') %></div>
-      <div class='description'><%= plant.description %></div> 
-      <%= link_to "Delete", user_mygardens_plants_path(@garden.id, plant.id), method: :delete %>
-   </div>
- </div>
+	<div class="cards">
+		<div class="cards__item">
+		<div class="card" style="width: 18rem;">
+			<img class="card-img-top"<%= image_tag(plant.image, height:'200', width: '150') %>
+			<div class="card-body">
+				<div class="name">
+					<h2><%= link_to plant.name.capitalize, search_details_path(plant.name)%></h2>
+				</div>
+				<% if !plant.description.nil? %>
+				<div class="description">
+					<p class="card-text"><%= plant.description[0..150] + "..." %></p>
+				</div>
+				<% else %>
+				<p>No description currently available</p>
+				<% end %>
+				<div class="delete-plant-<%=plant.id%>"><%= link_to "Delete From Garden", user_mygardens_plants_path(@garden.id, plant.id), method: :delete, data: {confirm: "Are you sure?"} %></div>
+			</div>
+		</div>
+	</div>
+	</div>
 	<% end %>
+</div>
 <% end %>
+</div>
+</center>

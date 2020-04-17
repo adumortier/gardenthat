@@ -1,7 +1,30 @@
+
+<center>
 <section class='plant_info'>
-  <% @plants.each do|plant| %>
-    <div class= 'name'> <%= link_to plant.name.capitalize, search_details_path(plant.slug) %>  </div>
-    <div class= 'image'> <%= image_tag(plant.image, height:'300', width: '400') %> </div>
-    <div class= 'description'> <%= plant.description %></div>
-  <% end %>
+  <div class="container-1">
+    <% @plants.map do |plant| %>
+    <div class="cards">
+      <div class="cards__item">
+      <div class="card" style="width: 18rem;">
+        <div class="image">
+          <img class="card-img-top"<%= image_tag(plant.image, height:'200', width: '150') %>
+        </div>
+        <div class="card-body">
+          <div class="name">
+            <h2><%= link_to plant.name.capitalize, search_details_path(plant.name)%></h2>
+          </div>
+          <% if !plant.description.nil? %>
+          <div class="description">
+            <p class="card-text"><%= plant.description[0..150] + "..." %></p>
+          </div>
+          <% else %>
+          <p>No description currently available</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    </div>
+    <% end %>
+  </div>
 </section>
+</center>
