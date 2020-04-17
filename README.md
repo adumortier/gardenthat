@@ -2,9 +2,9 @@
 <br />
 <p align="center">
   <a href="https://gardenthat.herokuapp.com/">
-    <img src="http://pureimg.com/public/uploads/large/241498764339cigllzrqdmwcdvdfqlnvthbmmfjytjttwf0qxzg2b5p6kevggmjzkyixvbv7nhdj3qhz3xyvydqcyjp85mietxfj9mvbs1bgytyl.jpg" alt="Logo" width="80" height="80">
+    <img src="app/assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
-
+  
   <h3 align="center">Gard(in) That!</h3>
 
 <p align="center">
