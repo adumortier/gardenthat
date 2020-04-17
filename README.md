@@ -19,7 +19,7 @@ Gard(in)That is an application meant for ANY gardener. Search a selection of fru
 * [Getting Started](#getting-started)
   * [Installation](#installation)
   * [Testing](#testing)
-  * [Microservices Access Points](#microservice)
+  * [Microservices](#microservice)
 * [Usage](#usage)
 * [Acknowledgements](#acknowledgements)
 
