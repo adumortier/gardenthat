@@ -29,7 +29,7 @@ describe 'As a registered user' do
       expect(user.name).to eq("gardenthattesting")
     end
 
-    xit 'it lets me sign in through google and redirects me to the welcome page only if I dont have a zip code stored', :vcr do
+    it 'it lets me sign in through google and redirects me to the welcome page only if I dont have a zip code stored', :vcr do
       visit '/'
       click_on 'Sign In'
       expect(current_path).to eq('/login')
