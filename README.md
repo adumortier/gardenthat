@@ -18,6 +18,7 @@ Gard(in)That is an application meant for ANY gardener. Search a selection of fru
   * [Schema](#schema)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
+  * [Testing](#testing)
 * [Usage](#usage)
 * [Acknowledgements](#acknowledgements)
 
@@ -80,12 +81,43 @@ Your `client_id` and `client_secret` keys can be stored securely in the `applica
 ```sh
 GOOGLE_CLIENT_ID: <YOUR CLIENT_ID HERE>
 GOOGLE_CLIENT_SECRET: <YOUR CLIENT_SECRET HERE>
-TEST_USER_GOOGLE_TOKEN: <YOUR KEY HERE>    
-TEST_USER_GOOGLE_REFRESH_TOKEN: <YOUR KEY HERE>
 ```
 6. Add your keys to your app on Heroku 
 ```sh
 figaro heroku:set -e production
+```
+
+### Testing
+
+1. Install RSpec
+
+```sh
+bundle install rspec
+```
+2. Run the test suite from the root directory of the repository
+
+```sh
+bundle exec rspec
+```
+### Notification Microservice Access Points 
+
+Retrieve the events from the GardenThatApp:
+```sh
+GET https://notificationmicroservice.herokuapp.com/events/info?token=<your_google_token_here>&refresh_token=<your_google_refresh_token_here>&calendar_name=GardenThatApp
+```
+Create a new calendar:
+```sh
+POST https://notificationmicroservice.herokuapp.com/calendar/new?token=<your_google_token_here>&refresh_token=<your_google_refresh_token_here>&calendar_name=<calendar_name_here>
+```
+
+Create a new event:
+```sh
+POST https://notificationmicroservice.herokuapp.com/event/new?token=<your_google_token_here>&refresh_token=<your_google_refresh_token_here>&name=<event_name_here>&description=<event_description_here>&date=<date_here>
+[date format yyyy-mm-dd]
+```
+Delete an event:
+```
+DELETE https://notificationmicroservice.herokuapp.com/event/info?token=<your_google_token_here>&refresh_token=<your_google_refresh_token_here>&calendar_id=<calendar_id_here>&event_id=<event_id_here>
 ```
 
 <!-- USAGE EXAMPLES -->
