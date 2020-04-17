@@ -7,7 +7,6 @@
   
   <h3 align="center">Gard(in) That!</h3>
 
-<p align="center">
 Gard(in)That is an application meant for ANY gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
 
 <!-- TABLE OF CONTENTS -->
