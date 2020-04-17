@@ -15,11 +15,11 @@ RSpec.describe "As a registered user " , type: :feature do
 
     it "see all my gardens" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
-			garden = Garden.create(name: "A", user: @user1)
+			garden = Garden.create(name: "A Nice Garden", user: @user1)
 			visit '/'
 			click_on 'My Garden'
 			expect(current_path).to eq("/user/mygardens")
-			expect(page).to have_content("A")
+			expect(page).to have_content("A Nice Garden")
 		end
 
 		it "catch unregistered user" do
