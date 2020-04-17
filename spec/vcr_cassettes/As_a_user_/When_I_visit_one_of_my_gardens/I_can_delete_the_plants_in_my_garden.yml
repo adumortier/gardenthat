@@ -1,0 +1,479 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://plantmicroservice.herokuapp.com/api/tomato
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4743'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 17 Apr 2020 00:58:23 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":1,"name":"tomato","image":"https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/5dc3618ef2c1020004f936e4.jpg?1573085580","description":"The
+        tomato is the fruit of the tomato plant, a member of the Nightshade family
+        (Solanaceae). The fruit grows on a sprawling vine that is often trellised
+        or caged to keep it upright. There are many kinds of tomatoes, including conventional,
+        hybrid, heirloom, plum, grape, and cherry. Determinate or bush varieties do
+        not need pruning and can be grown without trellises or cages. Indeterminate
+        or climbing varieties benefit from pruning and should be trellised, caged,
+        or staked.","slug":"tomato","created_at":"2020-04-16T16:24:38.706Z","updated_at":"2020-04-16T16:24:38.706Z"},{"id":13,"name":"cherry
+        tomato","image":"https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/57073ec44a3af70003000008.jpg?1460092609","description":"Cherry
+        tomatoes range in size from a thumbtip to the size of a golf ball. Their shape
+        ranges from spherical to slightly oblong to pointed at the bottom. They are
+        often red, but can also be yellow, green, striped, and even black. More oblong
+        cherry tomatoes often share characteristics with plum tomatoes, and are known
+        as grape tomatoes. Cherry tomatoes can be quite sweet (such as the Sungold
+        or Sunsweet yellow varieties), more traditionally acidic, or deep in flavor.
+        They are delicious for snacking, in salads, lightly roasted or grilled, or
+        baked. They require little to no pruning unlike larger tomato plants.","slug":"cherry-tomato","created_at":"2020-04-16T16:24:38.778Z","updated_at":"2020-04-16T16:24:38.778Z"},{"id":76,"name":"brandywine
+        tomato","image":"https://farm66.staticflickr.com/65535/49664432733_24168084ef_z.jpg","description":"The
+        Brandywine tomato plant is an heirloom cultivar of the species, with large
+        potato-leaved foliage and which bears large pink beefsteak-shaped fruit, popularly
+        considered among the best tasting available.  Brandywine tomatoes can bear
+        fruit up to 1.5 lbs (0.7 kg), requiring 80 to 100 days to reach maturity,
+        making it among the slowest maturing varieties of common tomato cultivars.
+        Brandywine has been described as having a \"great tomatoey flavor\"","slug":"brandywine-tomato","created_at":"2020-04-16T16:24:39.109Z","updated_at":"2020-04-16T16:24:39.109Z"},{"id":89,"name":"beefsteak
+        tomato","image":"https://farm3.staticflickr.com/2882/33348205936_261a964c76_z.jpg","description":null,"slug":"beefsteak-tomato","created_at":"2020-04-16T16:24:39.189Z","updated_at":"2020-04-16T16:24:39.189Z"},{"id":97,"name":"Roma
+        tomato","image":"https://farm8.staticflickr.com/7393/9403372612_f4bce3e49a_z.jpg","description":null,"slug":"roma-tomato","created_at":"2020-04-16T16:24:39.230Z","updated_at":"2020-04-16T16:24:39.230Z"},{"id":108,"name":"sunray
+        tomato","image":"https://farm5.staticflickr.com/4607/39456233165_64ed6e1f5f_z.jpg","description":"Sunrays
+        or Sungolds are a cherry tomato variety that produce small, round golden to
+        orange tomatoes. They have deeply sweet, delicious, fruity flavor. Harvest
+        when they are at their deepest hue for the most intense flavor. Cherry tomatoes
+        do not need to be pruned. Trellis and staking is optional.","slug":"yellow-tomato","created_at":"2020-04-16T16:24:39.422Z","updated_at":"2020-04-16T16:24:39.422Z"},{"id":102,"name":"opalka
+        tomato","image":"https://farm4.staticflickr.com/3856/14295327027_6c28f72b61_z.jpg","description":null,"slug":"opalka-tomato","created_at":"2020-04-16T16:24:39.387Z","updated_at":"2020-04-16T16:24:39.387Z"},{"id":137,"name":"Rapunzel
+        tomato","image":"https://farm66.staticflickr.com/65535/49607853452_f3b21fbcc6_z.jpg","description":null,"slug":"rapunzel-tomato","created_at":"2020-04-16T16:24:39.596Z","updated_at":"2020-04-16T16:24:39.596Z"},{"id":141,"name":"Island
+        Bay tomato","image":"https://farm66.staticflickr.com/65535/49638330296_ec420db2ab_z.jpg","description":"New
+        Zealand heritage heirloom. from Island Bay in Wellington\n\nIndeterminate.
+        An outstanding, large, even-sized, very red tomato with very full flavour.
+        Great for both eating and processing. Very healthy bushes.\n\nPlant into trays
+        late September and prick out when first leaves appear at 3 cm diagonal spacing.
+        Handle touching the leaves only. When leaves touch, transplant into 10 cm
+        deep pots or trays to 10 cm diagonal spacing. When 10-15 cm high transplant
+        into garden 50 cm spacings in rows. Two rows per 1m wide bed. Needs staking.","slug":"island-bay-tomato","created_at":"2020-04-16T16:24:39.621Z","updated_at":"2020-04-16T16:24:39.621Z"},{"id":242,"name":"tigerella
+        tomato","image":null,"description":null,"slug":"tigerella-tomato","created_at":"2020-04-16T16:24:40.260Z","updated_at":"2020-04-16T16:24:40.260Z"}]'
+    http_version: null
+  recorded_at: Fri, 17 Apr 2020 00:58:20 GMT
+- request:
+    method: get
+    uri: https://plantmicroservice.herokuapp.com/plant/tomato
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '832'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 17 Apr 2020 00:58:24 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"tomato","perennial":false,"first_harvest":88,"last_harvest":110,"description":"The
+        tomato is the fruit of the tomato plant, a member of the Nightshade family
+        (Solanaceae). The fruit grows on a sprawling vine that is often trellised
+        or caged to keep it upright. There are many kinds of tomatoes, including conventional,
+        hybrid, heirloom, plum, grape, and cherry. Determinate or bush varieties do
+        not need pruning and can be grown without trellises or cages. Indeterminate
+        or climbing varieties benefit from pruning and should be trellised, caged,
+        or staked.","sun":"Full Sun","image":"https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/5dc3618ef2c1020004f936e4.jpg?1573085580","height":90,"spread":60,"sowing":"Direct
+        seed indoors, transplant seedlings outside after hardening off","spacing":75}'
+    http_version: null
+  recorded_at: Fri, 17 Apr 2020 00:58:21 GMT
+- request:
+    method: get
+    uri: https://plantmicroservice.herokuapp.com/api/carrot
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3416'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 17 Apr 2020 00:58:24 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":4,"name":"carrot","image":"https://farm1.staticflickr.com/298/32893620625_4262eeb5c2_z.jpg","description":"The
+        carrot is a root vegetable. It is usually orange in color, but some cultivars
+        are purple, black, red, white, and yellow. The most commonly eaten part of
+        the plant is the taproot, but the greens are sometimes eaten as well. The
+        leaves appear first, and the taproot grows more slowly beneath the soil. Fast-growing
+        cultivars mature within three months of sowing the seed. Slower-maturing cultivars
+        are harvested four months after sowing.","slug":"carrot","created_at":"2020-04-16T16:24:38.732Z","updated_at":"2020-04-16T16:24:38.732Z"},{"id":160,"name":"white
+        carrot","image":"https://farm66.staticflickr.com/65535/49650766347_bcf8654c94_z.jpg","description":"White
+        carrots are a carrot cultivar that have pale yellow to white skin. They sometimes
+        have a lower yield than orange carrots. They have a mild flavor that is less
+        earthy than other carrot varieties. They are grown and cooked the same way
+        as standard orange carrots.","slug":"white-carrot","created_at":"2020-04-16T16:24:39.715Z","updated_at":"2020-04-16T16:24:39.715Z"},{"id":170,"name":"rainbow
+        carrot","image":"https://farm66.staticflickr.com/65535/49642242562_3899a80159_z.jpg","description":"A
+        mix of different coloured carrots, sold in one seed pack.","slug":"rainbow-carrot","created_at":"2020-04-16T16:24:39.764Z","updated_at":"2020-04-16T16:24:39.764Z"},{"id":419,"name":"purple
+        carrot","image":"https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/58c9be24f577a40004000164.jpg?1489616409","description":"Purple
+        carrots are a carrot cultivar that have purple skin and orange to purple flesh.
+        They are a little less sweet than orange carrots and sometimes have a lower
+        yield. They can be cooked the same way as carrots.","slug":"purple-carrot","created_at":"2020-04-16T16:24:41.375Z","updated_at":"2020-04-16T16:24:41.375Z"},{"id":797,"name":"carrot
+        Akaroa","image":"https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/5e82ab8c287a050004569809.jpg?1585621900","description":"A
+        rare New Zealand heritage carrot, originally from Akaroa, so possibly came
+        with the French settlers. It is a medium-size, deep orange to red carrot,
+        with a tapering end and is juicy and sweet with excellent flavour, harder,
+        denser flesh than modern super-sweet cultivars.\n\nPlanting Instructions:  Direct
+        scatter sow over 1sqm in spring. Cover with an old sheet or 70% shade cloth
+        while germinating.","slug":"carrot-akaroa","created_at":"2020-04-16T16:24:45.118Z","updated_at":"2020-04-16T16:24:45.118Z"},{"id":799,"name":"carrot
+        Juwarot","image":"https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/5e82abe8287a05000456980a.jpg?1585621991","description":"Another
+        rare carrot from the Henry Harrington Collection. It is a well known carrot
+        overseas, however it is also a New Zealand heritage cultivar, having been
+        grown here for at least 80 years. Juwarot was bred especially for juicing
+        and raw eating, and is juicy crisp and sweet and has double the Beta carotene
+        content of other carrots! 249 mg/kg highest ever recorded in carrots!\n\nPlanting
+        Instructions: Sow seeds fairly thickly, in successive sowings during spring,
+        summer and early autumn in warm areas.","slug":"carrot-juwarot","created_at":"2020-04-16T16:24:45.129Z","updated_at":"2020-04-16T16:24:45.129Z"}]'
+    http_version: null
+  recorded_at: Fri, 17 Apr 2020 00:58:21 GMT
+- request:
+    method: post
+    uri: https://notificationmicroservice.herokuapp.com/event/new?calendar_id=5n59q0ueh4202i4mlstfbqejgc@group.calendar.google.com&date=2020-07-14&description=It%27s%20time%20to%20harvest%20your%20tomato%20in%20Garden%201&name=Tomato%20harvest%20time!&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '129'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 17 Apr 2020 00:58:24 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"summary":"Tomato harvest time!","description":"It''s time to harvest
+        your tomato in Garden 1","id":"gh3at8d3rv30gqbru7e6pies1g"}'
+    http_version: null
+  recorded_at: Fri, 17 Apr 2020 00:58:21 GMT
+- request:
+    method: get
+    uri: https://plantmicroservice.herokuapp.com/plant/carrot
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '782'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 17 Apr 2020 00:58:25 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"name":"carrot","perennial":false,"first_harvest":102,"last_harvest":159,"description":"The
+        carrot is a root vegetable. It is usually orange in color, but some cultivars
+        are purple, black, red, white, and yellow. The most commonly eaten part of
+        the plant is the taproot, but the greens are sometimes eaten as well. The
+        leaves appear first, and the taproot grows more slowly beneath the soil. Fast-growing
+        cultivars mature within three months of sowing the seed. Slower-maturing cultivars
+        are harvested four months after sowing.","sun":"Full Sun","image":"https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/58c312395865650004000000.jpg?1489179191","height":10,"spread":5,"sowing":"Direct
+        Seed, thin to 3cm apart when seedlings are 8cm high","spacing":5}'
+    http_version: null
+  recorded_at: Fri, 17 Apr 2020 00:58:22 GMT
+- request:
+    method: post
+    uri: https://notificationmicroservice.herokuapp.com/event/new?calendar_id=5n59q0ueh4202i4mlstfbqejgc@group.calendar.google.com&date=2020-07-28&description=It%27s%20time%20to%20harvest%20your%20carrot%20in%20Garden%201&name=Carrot%20harvest%20time!&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '129'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 17 Apr 2020 00:58:25 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"summary":"Carrot harvest time!","description":"It''s time to harvest
+        your carrot in Garden 1","id":"gqq3bno4tbnmk3uie0lsgf1eko"}'
+    http_version: null
+  recorded_at: Fri, 17 Apr 2020 00:58:22 GMT
+- request:
+    method: get
+    uri: https://notificationmicroservice.herokuapp.com/events/info?calendar_name=GardenThatApp&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '395'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 17 Apr 2020 00:58:26 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"name":"Tomato harvest time!","description":"It''s time to harvest
+        your tomato in Garden 1","start":"2020-07-14T16:00:00+00:00","end":"2020-07-15T00:00:00+00:00","id":"gh3at8d3rv30gqbru7e6pies1g"},{"name":"Carrot
+        harvest time!","description":"It''s time to harvest your carrot in Garden
+        1","start":"2020-07-28T16:00:00+00:00","end":"2020-07-29T00:00:00+00:00","id":"gqq3bno4tbnmk3uie0lsgf1eko"}]'
+    http_version: null
+  recorded_at: Fri, 17 Apr 2020 00:58:23 GMT
+- request:
+    method: delete
+    uri: https://notificationmicroservice.herokuapp.com/event/info?calendar_id=5n59q0ueh4202i4mlstfbqejgc@group.calendar.google.com&event_id=gh3at8d3rv30gqbru7e6pies1g&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 17 Apr 2020 00:58:41 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Fri, 17 Apr 2020 00:58:38 GMT
+- request:
+    method: get
+    uri: https://notificationmicroservice.herokuapp.com/events/info?calendar_name=GardenThatApp&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '198'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 17 Apr 2020 00:58:41 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"name":"Carrot harvest time!","description":"It''s time to harvest
+        your carrot in Garden 1","start":"2020-07-28T16:00:00+00:00","end":"2020-07-29T00:00:00+00:00","id":"gqq3bno4tbnmk3uie0lsgf1eko"}]'
+    http_version: null
+  recorded_at: Fri, 17 Apr 2020 00:58:38 GMT
+- request:
+    method: delete
+    uri: https://notificationmicroservice.herokuapp.com/event/info?calendar_id=5n59q0ueh4202i4mlstfbqejgc@group.calendar.google.com&event_id=gqq3bno4tbnmk3uie0lsgf1eko&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 17 Apr 2020 00:58:42 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Fri, 17 Apr 2020 00:58:39 GMT
+recorded_with: VCR 5.1.0
