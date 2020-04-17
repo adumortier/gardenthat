@@ -8,8 +8,7 @@
   <h3 align="center">Gard(in) That!</h3>
 
 <p align="center">
-Gard(in) That is an application meant for ANY gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
-
+Gard(in)That is an application meant for ANY gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -28,26 +27,23 @@ Gard(in) That is an application meant for ANY gardener. Search a selection of fr
 
 <a href="https://ibb.co/fpgZSxG"><img src="https://i.ibb.co/FwrcWDq/Screen-Shot-2020-04-16-at-5-27-44-PM.png" alt="Screen-Shot-2020-04-16-at-5-27-44-PM" border="0"></a>
 
-Gard(in) That was built on a rails framework that is linked with two different Sinatra microservices. Our plant microservice houses a database of basic plant information and is tied to GrowStuff's API (see acknowledgments section below). Our second microservice ties into Google Calendars. OAuth is also through Google. 
+Gard(in)That is built on a rails framework and uses two separate Sinatra microservices. Our plant microservice houses a database of basic plant information and is tied to GrowStuff's API (see acknowledgments section below). The plant microservice takes in partial or complete searches and returns a list of plants stored in its database. Users can also search plants through a catalog of over 800 plants. Our second microservice ties into the Google Calendars API. A GardenThatApp Google calendar is created the first time users sign in (through Google OAuth) and our second microservice adds notifications to their calendar based on the plants they've added to their garden(s). 
 
 Our Plant MicroService can be found here: https://github.com/nkeller1/plant_search
 
 Our Notification MicroService can be found here: https://github.com/adumortier/notifications
 
-
 ![alt text](app/assets/images/demo_gardenthat.gif)
 
 ### Built With
 
-* Ruby on Rails
-* Sintra
-* Deployed With Heroku
-* PostgreSQL
-* Bootstrap
-* RSpec
-* RackTest
-* Travis CI
-* A forge of amazing RubyGems
+* Frameworks: Ruby on Rails, Sinatra
+* Deployment: Heroku
+* Database: PostgreSQL
+* Testing: RSpec, RackTest, SimpleCov, Capybara (test coverage > 90%.)
+* Front-End Design: Bootstrap
+* Continuous Integration: Travis CI
+* ... and a forge of amazing RubyGems!
 
 ### Schema
 
@@ -84,7 +80,7 @@ GOOGLE_CLIENT_SECRET: <YOUR KEY HERE>
 TEST_USER_GOOGLE_TOKEN: <YOUR KEY HERE>
 TEST_USER_GOOGLE_REFRESH_TOKEN: <YOUR KEY HERE>
 ```
-6. Push your keys to Heroku 
+6. Add your keys to your app on Heroku 
 
 `figaro heroku:set -e production`
 
@@ -99,7 +95,6 @@ Future iterations will include:
 * suggestions based on the plants you already have in your garden
 * a 'Tips' section on how to get the most out of your garden
 * an entire Gard(in) That community!
-
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
