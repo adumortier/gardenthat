@@ -80,7 +80,8 @@ bundle exec figaro install
 ```
 5. Register your app with [Google](https://console.developers.google.com/) to receive your `client_id` and `client_secret` 
 
-Your `client_id` and `client_secret` keys can be stored securely in the `application.yml` file of your `app/config` directory.
+Your `client_id` and `client_secret` keys must be stored securely in the `application.yml` file of your `app/config` directory.
+
 ```sh
 GOOGLE_CLIENT_ID: <YOUR CLIENT_ID HERE>
 GOOGLE_CLIENT_SECRET: <YOUR CLIENT_SECRET HERE>
