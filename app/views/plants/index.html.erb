@@ -1,9 +1,9 @@
 
 <center>
 <section class='plant_info'>
-  <%= will_paginate(@plants)  %>
+  <%= will_paginate(plants)  %>
   <div class="container-1">
-    <% @plants.map do |plant| %>
+    <% plants.map do |plant| %>
     <div class="cards">
       <div class="cards__item">
       <div class="card" style="width: 18rem;">
@@ -25,6 +25,7 @@
     </div>
     <% end %>
   </div>
-<%= will_paginate @plants %>
+<%= will_paginate plants %>
 </section>
 </center>
+  
