@@ -43,7 +43,7 @@ RSpec.describe "As a user " , type: :feature do
 
       visit "/user/mygardens/#{@garden.id}"
 
-      within("div#plant-#{@user1.gardens.first.plants.first.id}") do
+      within(".delete-plant-#{@user1.gardens.first.plants.first.id}") do
         click_link "Delete"
       end
 
@@ -58,7 +58,7 @@ RSpec.describe "As a user " , type: :feature do
 
       visit "/user/mygardens/#{@garden.id}"
 
-      within("div#plant-#{@user1.gardens.first.plants.first.id}") do
+      within(".delete-plant-#{@user1.gardens.first.plants.first.id}") do
         click_link "Delete"
       end
 
