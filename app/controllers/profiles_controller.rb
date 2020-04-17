@@ -7,12 +7,12 @@ class ProfilesController < ApplicationController
     if current_user.nil?
       render file: "/public/404"
     else
-      @user = User.find(current_user.id)
+      render locals: {user: User.find(current_user.id) }
     end
   end
 
   def edit
-    @user = User.find(current_user.id)
+    render locals: {user: User.find(current_user.id) }
   end
 
   def update

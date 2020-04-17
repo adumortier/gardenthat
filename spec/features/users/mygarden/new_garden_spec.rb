@@ -18,10 +18,10 @@ RSpec.describe "As a registered user " , type: :feature do
       visit "/user/mygardens"
       click_link "Create New Garden"
       expect(current_path).to eq("/user/mygardens/new")
-			fill_in :name, with: 'B'
+			fill_in :name, with: 'A good garden'
 			click_on "Create Garden"
 			expect(current_path).to eq('/user/mygardens')
-			expect(page).to have_content('B')
+			expect(page).to have_content('A good garden')
     end
 	end
 end
