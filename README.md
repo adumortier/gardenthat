@@ -5,7 +5,7 @@
     <img src="app/assets/images/logo.png" alt="Logo" width="120" height="110">
   </a>
   
-  <h1 align="center">Gard(in) That!</h1> <br><br>
+  <h1 align="center">Garden That!</h1> <br><br>
 
 GardenThat is an application meant for ANY gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
 
