@@ -7,7 +7,7 @@
   
   <h1 align="center">Gard(in) That!</h1> <br><br>
 
-Gard(in)That is an application meant for ANY gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
+GardenThat is an application meant for ANY gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -29,7 +29,7 @@ Gard(in)That is an application meant for ANY gardener. Search a selection of fru
 
 <a href="https://ibb.co/fpgZSxG"><img src="https://i.ibb.co/FwrcWDq/Screen-Shot-2020-04-16-at-5-27-44-PM.png" alt="Screen-Shot-2020-04-16-at-5-27-44-PM" border="0"></a>
 
-Gard(in)That is built on a rails framework and uses two separate Sinatra microservices. Our plant microservice houses a database of basic plant information and is tied to GrowStuff's API (see acknowledgments section below). The plant microservice takes in partial or complete searches and returns a list of plants stored in its database. Users can also search plants through a catalog of over 800 plants. Our second microservice ties into the Google Calendars API. A GardenThatApp Google calendar is created the first time users sign in (through Google OAuth) and our second microservice adds notifications to their calendar based on the plants they've added to their garden(s). 
+GardenThat is built on a rails framework and uses two separate Sinatra microservices. Our plant microservice houses a database of basic plant information and is tied to GrowStuff's API (see acknowledgments section below). The plant microservice takes in partial or complete searches and returns a list of plants stored in its database. Users can also search plants through a catalog of over 800 plants. Our second microservice ties into the Google Calendars API. A GardenThatApp Google calendar is created the first time users sign in (through Google OAuth) and our second microservice adds notifications to their calendar based on the plants they've added to their garden(s). 
 
 Our Plant MicroService can be found [here](https://github.com/nkeller1/plant_search)
 
@@ -150,14 +150,14 @@ Future iterations will include:
 * recommendations based on your location
 * suggestions based on the plants you already have in your garden
 * a 'Tips' section on how to get the most out of your garden
-* an entire Gard(in) That community!
+* an entire GardenThat community!
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
 * [GrowStuff.org](https://www.growstuff.org/)
 * [Google Dev](https://console.developers.google.com/)
-* Gabz Cirbo for designing the Gard(in)That logo! 
+* Gabz Cirbo for designing the GardenThat logo! 
 
 ## Developer GitHub Profiles
 
@@ -166,4 +166,4 @@ Future iterations will include:
 * Nathan Keller - [GitHub](https://github.com/nkeller1)<br>
 * Will Kunz - [GitHub](https://github.com/willkunz13)<br>
 
-Deployed Application on Heroku: [Gard(in) That!](https://gardenthat.herokuapp.com/)
+Deployed Application on Heroku: [GardenThat!](https://gardenthat.herokuapp.com/)
