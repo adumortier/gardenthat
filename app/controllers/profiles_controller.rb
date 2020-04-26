@@ -4,11 +4,8 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    if current_user.nil?
-      render file: "/public/404"
-    else
-      render locals: {user: User.find(current_user.id) }
-    end
+    return render file: "/public/404" if current_user.nil?
+    return render locals: {user: User.find(current_user.id) }
   end
 
   def edit
@@ -16,24 +13,20 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    user = User.find(params[:id])
-    user.update(user_params)
-    user.save
+    User.find(params[:id]).update(user_params)
     flash[:notice] = 'Profile Updated!'
-    redirect_to "/profile/#{user.id}"
+    redirect_to "/profile/#{params[:id]}"
   end
 
   def create
-    if current_user
-      current_user.update(user_params)
-    end
+    current_user.update(user_params) if current_user
     redirect_to root_path
   end
 
   def destroy
     User.find(params[:id]).destroy
     session.clear
-    redirect_to '/'
+    redirect_to root_path
     flash[:alert] = "Profile Deleted"
   end
 

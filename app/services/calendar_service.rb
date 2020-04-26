@@ -9,7 +9,7 @@ class CalendarService
       req.params['description'] = description
       req.params['date'] = date
     end
-    return JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.create_calendar(user, calendar_name)
@@ -28,7 +28,7 @@ class CalendarService
       req.params['token'] = user.google_token
       req.params['refresh_token'] = user.google_refresh_token
     end
-    result = JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.list_events(user)
@@ -37,11 +37,11 @@ class CalendarService
       req.params['refresh_token'] = user.google_refresh_token
       req.params['calendar_name'] = "GardenThatApp"
     end
-    result = JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.delete_event(user, event_id)
-    response = conn.delete('event/info?') do |req|
+    conn.delete('event/info?') do |req|
       req.params['token'] = user.google_token
       req.params['refresh_token'] = user.google_refresh_token
       req.params['calendar_id'] = user.calendar_id
