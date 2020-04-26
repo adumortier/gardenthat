@@ -1,7 +1,6 @@
 class User::PlantsController < User::BaseController
 	def create
-		name = params[:name]
-		plant = Plant.where(name: name).first
+		plant = Plant.where(name: params[:name]).first
 		if !plant
 			plant = Plant.create(plant_params)
 		end
