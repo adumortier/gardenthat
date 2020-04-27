@@ -7,7 +7,7 @@
   
   <h1 align="center">Garden That!</h1> <br><br>
 
-GardenThat is an application meant for ANY gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
+GardenThat is an application meant for any gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
