@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://notificationmicroservice.herokuapp.com/event/new?calendar_id=5n59q0ueh4202i4mlstfbqejgc@group.calendar.google.com&date=2020-07-24&description=It%27s%20time%20to%20harvest%20your%20tomato%20in%20Garden%201&name=Tomato%20harvest%20time!&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '129'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Mon, 27 Apr 2020 00:26:22 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"summary":"Tomato harvest time!","description":"It''s time to harvest
+        your tomato in Garden 1","id":"q2h0brg43ul7l7d56cdvk3qrss"}'
+    http_version: null
+  recorded_at: Mon, 27 Apr 2020 00:26:21 GMT
+- request:
+    method: post
+    uri: https://notificationmicroservice.herokuapp.com/event/new?calendar_id=no5nrau9mnuut1420lotg7eu54@group.calendar.google.com&date=2020-04-27&description=It%27s%20time%20to%20harvest%20your%20tomato%20in%20A%20Nice%20Garden&name=Tomato%20harvest%20time!&refresh_token=1//04-pZhdbjX-F2CgYIARAAGAQSNwF-L9IrmJCHmMdtJ-4XrzvIBNyg8gNQNuYAEhMz-a_NImQ7FdjOIXCChZpDyKeZL0I8JxrpruE&token=ya29.a0Ae4lvC1Adi34MYE7q9MIO-gR8gFyPQ67iEcykuaqUNq-RB2uFv1IcFCJqVwEeTRhaWP_KpCUjQu1OXOnY28I3r5iTk_CLS132WgS9VoAr7IO0jSnil-P5gf7RGnD-u04rFaBcNvosxGR3goBZJF2dZ1N7qLIzFc0xsQ
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.3
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '134'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Mon, 27 Apr 2020 00:26:24 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"summary":"Tomato harvest time!","description":"It''s time to harvest
+        your tomato in A Nice Garden","id":"bkpih0kjv3gthplgmpr85sfjic"}'
+    http_version: null
+  recorded_at: Mon, 27 Apr 2020 00:26:22 GMT
+recorded_with: VCR 5.1.0
