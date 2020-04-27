@@ -17,9 +17,7 @@ class PlantService
   end
 
   def self.get_all_plants
-    response = conn.get('allplants')
-    JSON.parse(response.body, symbolize_names: true)
+    @@get_all_plants ||= JSON.parse(conn.get('allplants').body, symbolize_names: true) 
   end
-
 
 end
