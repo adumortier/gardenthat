@@ -18,7 +18,8 @@ GardenThat is an application meant for ANY gardener. Search a selection of fruit
 * [Getting Started](#getting-started)
   * [Installation](#installation)
   * [Testing](#testing)
-  * [Microservices](#microservices)
+  * [Notification Microservice Access Points](#notification-microservice-access-points)
+  * [Plant Microservice Access Points](#plant-microservice-access-points)
 * [Usage](#usage)
 * [Acknowledgements](#acknowledgements)
 
