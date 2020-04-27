@@ -8,9 +8,9 @@
     <p>Garden address: <%= garden.address %></p>
     <p class="lead">
       <a class="btn btn-success btn-lg" href="/user/mygardens/<%=garden.id%>" role="button">Garden Details</a>
-      <%= button_to "Delete Garden", "/user/mygardens/#{garden.id}", method: :delete, class: "btn btn-danger" %></p>
+      <%= button_to "Delete Garden", "/user/mygardens/#{garden.id}", method: :delete, class: "btn btn-danger btn-lg" %></p>
     <% end %>
     <hr class="my-4">
-    <a class="btn btn-primary btn-lg" href="/user/mygardens/new" role="button">Create New Garden</a>
+    <a class="btn btn-primary btn-lg" href="/user/mygardens/new" role="button">New Garden</a>
   </div>
 </center>

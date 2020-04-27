@@ -6,8 +6,10 @@
             <div class="card-body"><h4>Name: <%= user.name %></h4></div>
             <div class="card-body"><h4>Email: <%= user.email %></h4></div>
             <div class="card-body"><h4>Zip Code: <%= user.zip_code %></h4></div>
-            <div class="card-body"><%= link_to "Edit Profile", "/profile/#{user.id}/edit" %></div>
-            <div class="card-body"><%= link_to "Delete Profile", "/profile/#{user.id}", method: :delete, data: {confirm: "Are you sure?"}%></div>
+            <div class="card-body">
+              <%= button_to "Edit Profile", "/profile/#{user.id}/edit", style:"margin-left: 34%", method: :get, class: "btn btn-success btn-lg btn-block col-sm-4" %> <br>
+              <%= button_to "Delete Profile", "/profile/#{user.id}", style:"margin-left: 34%", method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-lg btn-block col-sm-4" %> <br>
+            </div>
         </div>
   </div>
 </div>

@@ -14,7 +14,7 @@ RSpec.describe "Delete Profile" , type: :feature do
 
     expect(User.all.last).to eq(user)
 
-    click_link 'Delete Profile'
+    click_on 'Delete Profile'
 
     expect(current_path).to eq('/')
 
