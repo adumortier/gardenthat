@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg" style="background-color: #8FBC8F;">
+<nav class="navbar navbar-expand-lg fixed-top"" style="background-color: #8FBC8F;">
   <%= form_with(url: "/search", method: "get", local: true) do %>
     <%= text_field_tag 'search', nil, placeholder: 'Search plants...' %>
     <%= submit_tag "Search", class: "btn btn-primary my-2 my-sm-0" %>
