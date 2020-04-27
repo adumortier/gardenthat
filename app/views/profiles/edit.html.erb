@@ -4,11 +4,13 @@
       <div class="card bg-light mb-3" style="width:30rem;">
         <br><br>
         <div class="card-body"><h2>Edit Profile </h2></div>
-        <div class="card-body"><%= form_tag "/profile/#{user.id}", method: :patch do  %>
-          <%= label_tag(:name, "Name") %>
-          <%= text_field_tag :name, "#{user.name}" %><br> <br>
-          <%= label_tag :zip_code %>
-          <%= number_field_tag :zip_code, "#{user.zip_code}"%><br> <br>
+        <div class="card-body">
+        <%= form_tag "/profile/#{user.id}", method: :patch do  %>
+          <%= label_tag(:name, "Name:") %>
+          <%= text_field_tag :name, "#{user.name}", style: "margin: 0% 5% 0% 5%" %><br> <br>
+          <%= label_tag(:zip_code, "Zip Code:") %>
+          <%= number_field_tag :zip_code, "#{user.zip_code}", style: "margin: 0% 10% 0% 5%" %><br> <br>  <br>
+
           <button type="submit" class="btn btn-primary btn-lg btn-block col-sm-5 " style="margin-left: 30%">Update Profile</button>
         <% end %>
         <br><br><br>
