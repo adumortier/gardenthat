@@ -1,7 +1,7 @@
 
 <center>
 <section class='plant_info'>
-<% cache do %>
+
   <%= will_paginate(plants)  %>
   <div class="container-1">
     <% plants.map do |plant| %>
@@ -27,7 +27,7 @@
     <% end %>
   </div>
 <%= will_paginate plants %>
- <% end %>
+ 
 </section>
 </center>
   
