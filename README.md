@@ -47,6 +47,7 @@ Our Notification MicroService can be found [here](https://github.com/adumortier/
 * Testing: RSpec, RackTest, SimpleCov, Capybara (test coverage > 90%.)
 * Front-End Design: Bootstrap
 * Continuous Integration: Travis CI
+* Background jobs/workers: Sidekiq
 * Project Management: Trello
 * ... and a forge of amazing RubyGems!
 
