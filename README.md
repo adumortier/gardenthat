@@ -13,7 +13,6 @@ GardenThat is an application meant for ANY gardener. Search a selection of fruit
 ## Table of Contents
 
 * [About the Project](#about-the-project)
-  * [Demo](#demo)
   * [Built With](#built-with)
   * [Schema](#schema)
 * [Getting Started](#getting-started)
@@ -34,10 +33,6 @@ GardenThat is built on a rails framework and uses two separate Sinatra microserv
 Our Plant MicroService can be found [here](https://github.com/nkeller1/plant_search)
 
 Our Notification MicroService can be found [here](https://github.com/adumortier/notifications)
-
-### Demo
-
-![alt text](app/assets/images/demo_gardenthat.gif)
 
 ### Built With
 
