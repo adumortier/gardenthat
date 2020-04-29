@@ -24,14 +24,9 @@ RSpec.describe "Plant Search Page" , type: :feature do
       within('.plant_details') do
         expect(page).to have_content('tomato')
         expect(page).to have_content('false')
-        expect(page).to have_content(88)
-        expect(page).to have_content(110)
         expect(page).to have_content("The tomato is the fruit of the tomato plant, a member of the Nightshade family (Solanaceae). The fruit grows on a sprawling vine that is often trellised or caged to keep it upright. There are many kinds of tomatoes, including conventional, hybrid, heirloom, plum, grape, and cherry. Determinate or bush varieties do not need pruning and can be grown without trellises or cages. Indeterminate or climbing varieties benefit from pruning and should be trellised, caged, or staked.")
         expect(page).to have_content('Full Sun')
-        expect(page).to have_content(90)
-        expect(page).to have_content(60)
         expect(page).to have_content("Direct seed indoors, transplant seedlings outside after hardening off")
-        expect(page).to have_content(75)
       end
   end
   

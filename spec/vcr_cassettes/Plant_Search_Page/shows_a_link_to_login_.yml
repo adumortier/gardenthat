@@ -29,7 +29,7 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 16 Apr 2020 17:41:29 GMT
+      - Wed, 29 Apr 2020 22:02:08 GMT
       Via:
       - 1.1 vegur
     body:
@@ -77,7 +77,7 @@ http_interactions:
         into garden 50 cm spacings in rows. Two rows per 1m wide bed. Needs staking.","slug":"island-bay-tomato","created_at":"2020-04-16T16:24:39.621Z","updated_at":"2020-04-16T16:24:39.621Z"},{"id":242,"name":"tigerella
         tomato","image":null,"description":null,"slug":"tigerella-tomato","created_at":"2020-04-16T16:24:40.260Z","updated_at":"2020-04-16T16:24:40.260Z"}]'
     http_version: null
-  recorded_at: Thu, 16 Apr 2020 17:41:29 GMT
+  recorded_at: Wed, 29 Apr 2020 22:02:03 GMT
 - request:
     method: get
     uri: https://plantmicroservice.herokuapp.com/plant/tomato
@@ -107,12 +107,12 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 16 Apr 2020 17:41:32 GMT
+      - Wed, 29 Apr 2020 22:02:09 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"name":"tomato","perennial":false,"first_harvest":88,"last_harvest":110,"description":"The
+      string: '{"name":"tomato","perennial":false,"first_harvest":90,"last_harvest":115,"description":"The
         tomato is the fruit of the tomato plant, a member of the Nightshade family
         (Solanaceae). The fruit grows on a sprawling vine that is often trellised
         or caged to keep it upright. There are many kinds of tomatoes, including conventional,
@@ -122,5 +122,5 @@ http_interactions:
         or staked.","sun":"Full Sun","image":"https://s3.amazonaws.com/openfarm-project/production/media/pictures/attachments/5dc3618ef2c1020004f936e4.jpg?1573085580","height":90,"spread":60,"sowing":"Direct
         seed indoors, transplant seedlings outside after hardening off","spacing":75}'
     http_version: null
-  recorded_at: Thu, 16 Apr 2020 17:41:32 GMT
+  recorded_at: Wed, 29 Apr 2020 22:02:05 GMT
 recorded_with: VCR 5.1.0
