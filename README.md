@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/adumortier/gardenthat.svg?branch=master)](https://travis-ci.com/github/adumortier/gardenthat)
+<!--- [![Build Status](https://travis-ci.com/adumortier/gardenthat.svg?branch=master)](https://travis-ci.com/github/adumortier/gardenthat)and --->
 
 
 <!-- PROJECT LOGO -->
