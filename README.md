@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/adumortier/gardenthat.svg?branch=master)](https://travis-ci.com/github/adumortier/gardenthat)
-
-
+[![codecov](https://codecov.io/gh/adumortier/gardenthat/branch/master/graph/badge.svg)](https://codecov.io/gh/adumortier/gardenthat)
+  
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
