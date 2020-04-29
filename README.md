@@ -6,6 +6,8 @@
   </a>
   
   <h1 align="center">Garden That!</h1> <br><br>
+  
+[![Build Status](https://travis-ci.com/adumortier/gardenthat.svg?branch=master)](https://travis-ci.com/github/adumortier/gardenthat)
 
 GardenThat is an application meant for any gardener. Search a selection of fruit and vegetable bearing plants. Add your favorite plants to your Garden. Automated calendar notifications tell you when to expect your first harvest.
 
