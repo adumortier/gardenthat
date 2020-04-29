@@ -43,7 +43,8 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'simplecov'
+  gem 'simplecov', require: false, group: :test
+  gem 'codecov', require: false, group: :test
   gem 'travis'
   gem 'vcr'
   gem 'webmock'
