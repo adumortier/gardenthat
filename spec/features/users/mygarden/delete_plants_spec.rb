@@ -10,7 +10,7 @@ RSpec.describe "As a user " , type: :feature do
                             zip_code: '02300',
                             google_token: ENV['TEST_USER_GOOGLE_TOKEN'],
                             google_refresh_token: ENV['TEST_USER_GOOGLE_REFRESH_TOKEN'],
-                            calendar_id: '5n59q0ueh4202i4mlstfbqejgc@group.calendar.google.com'
+                            calendar_id: '8pba8h633i15sulq6rr7865nes@group.calendar.google.com'
                           )
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
 			@garden = Garden.create(name: 'Garden 1', user: @user1)
@@ -31,7 +31,7 @@ RSpec.describe "As a user " , type: :feature do
 			click_on "Carrot"
 			click_on "Add to MyGarden"
       click_link 'Garden 1'
-
+      
       events1 = CalendarService.list_events(@user1)
       list_events1 = events1.map {|event| event[:name]}
 
