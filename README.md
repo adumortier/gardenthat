@@ -33,9 +33,10 @@ GardenThat is an application meant for any gardener. Search a selection of fruit
 
 <a href="https://ibb.co/fpgZSxG"><img src="https://i.ibb.co/FwrcWDq/Screen-Shot-2020-04-16-at-5-27-44-PM.png" alt="Screen-Shot-2020-04-16-at-5-27-44-PM" border="0"></a>
 
-<div style="text-align: justify">
+<p style='text-align: justify;'>
 GardenThat is built on a rails framework and uses two separate Sinatra microservices. Our plant microservice houses a database of basic plant information and is tied to GrowStuff's API (see acknowledgments section below). The plant microservice takes in partial or complete searches and returns a list of plants stored in its database. Users can also search plants through a catalog of over 800 plants. Our second microservice ties into the Google Calendars API. A GardenThatApp Google calendar is created the first time users sign in (through Google OAuth) and our second microservice adds notifications to their calendar based on the plants they've added to their garden(s). 
-</div>
+</p>
+
 Our Plant MicroService can be found [here](https://github.com/nkeller1/plant_search)
 
 Our Notification MicroService can be found [here](https://github.com/adumortier/notifications)
