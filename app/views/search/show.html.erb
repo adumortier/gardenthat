@@ -1,12 +1,14 @@
-<center>
+<br> <br>
+
+
   <% if @error %>
     <h2>We are sorry, no details currently avaiable for this plant. Check back soon. </h2>
   <% else %>
-    <div class="container-1">
+    <div class="container-1 justify-content-center">
       <div class="plant-cards">
         <div class="cards__item">
-          <div class="card-1">
-            <br><br><img class="card-img-top"<%= image_tag(plant.image, height:'400', width: '300') %>
+          <div class="card-1" >
+            <br><img class="card-img-top"<%= image_tag(plant.image, height:'350', width: '200') %> 
             <div class="card-body">
               <% if current_user.nil? %>
                 <%= link_to 'Login With Google to Add to your Garden!', '/login' %>
@@ -22,24 +24,25 @@
               		<%= hidden_field_tag :height, plant.height %>
               		<%= hidden_field_tag :spread, plant.spread %>
               		<%= hidden_field_tag :spacing, plant.spacing %>
-              		<%= submit_tag 'Add to MyGarden' %>
+                  <button type="submit" class="btn btn-success btn-lg btn-block col-sm-9 " style="margin-left: 10%">Add to MyGarden</button>
               	<% end %>
               <% end %>
             </div>
           </div>
           <div class="cards__item">
-          <div class="card-2 bg-light mb-3">
-            <div class="card-body plant_details">
-              <h2>Name: <%=  plant.name.capitalize %> </h2>
-              <p>Perennial: <%=  plant.perennial %> </p>
-              <p>Time to First Harvest: <%=  plant.first_harvest %></p>
-              <p>Time to Last Harvest: <%=  plant.last_harvest %></p>
-              <p>Description: <%=  plant.description %></p>
-              <p>Amount of Sun: <%=  plant.sun %></p>
-              <p>Average Height: <%=  plant.height %> cm </p>
-              <p>Average Spread: <%=  plant.spread %> cm </p>
-              <p>How to Sow: <%=  plant.sowing %> </p>
-              <p>Average Spacing <%=  plant.spacing %> </p>
+          <div class="card-2 bg-light mb-3"  style="margin-left:20%">
+            <div class="card-body plant_details" style="padding: 8%" >
+              <h3> <center> Name: <%=  plant.name.capitalize %> </center></h3>
+              <br>
+              <p class = "text-justify"><b>Description: </b> <br> <br><%=  plant.description %></p>
+              <p><b>How to Sow:</b> <br><br> <%=  plant.sowing %> </p>
+              <p><b>Perennial: </b> <%=  plant.perennial %> </p>
+              <p><b>Time to First Harvest: </b><%=  plant.first_harvest %> days </p>
+              <p><b>Time to Last Harvest: </b><%=  plant.last_harvest %> days </p>
+              <p><b>Amount of Sun:</b> <%=  plant.sun %></p>
+              <p><b>Average Height:</b> <%=  plant.height %> cm </p>
+              <p><b>Average Spread: </b><%=  plant.spread %> cm </p>
+              <p><b>Average Spacing:</b> <%=  plant.spacing %> cm </p>
             </div>
             </div>
           </div>
@@ -47,4 +50,4 @@
       </div>
     </div>
   <% end %>
-</center>
+

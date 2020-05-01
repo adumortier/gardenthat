@@ -15,13 +15,13 @@
 
   <%= render 'partials/nav' %>
   <body>
-
+  <div id="flash-messages-section">
     <% flash.each do |name, msg| %>
       <div class= "<%=name%>-flash alert alert-primary" role="alert">
         <%= msg %>
       </div>
     <% end %>
-
+</div>
     <%= yield %>
   </body>
 </html>
