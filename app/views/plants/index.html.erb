@@ -3,7 +3,8 @@
 
 <section class='plant_info '>
 
-  <%= will_paginate(plants)  %>
+  <div class='digg_pagination' style="padding-left: 6%"> <%= will_paginate(plants)  %> </div> 
+  <br>
   <div class="container-1 justify-content-center">
     <% plants.map do |plant| %>
     <div class="cards">
@@ -27,7 +28,7 @@
     </div>
     <% end %>
   </div>
-<%= will_paginate plants %>
+<div class='digg_pagination' style="padding-left: 6%"> <%= will_paginate plants %> </div> 
  
 </section>
 
