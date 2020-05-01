@@ -44,7 +44,7 @@ Our Notification MicroService can be found [here](https://github.com/adumortier/
 * Frameworks: Ruby on Rails, Sinatra
 * Deployment: Heroku
 * Database: PostgreSQL
-* Testing: RSpec, RackTest, SimpleCov, Capybara (test coverage > 90%.)
+* Testing: RSpec, RackTest, SimpleCov, Capybara
 * Front-End Design: Bootstrap
 * Continuous Integration: Travis CI
 * Background jobs/workers: Sidekiq
