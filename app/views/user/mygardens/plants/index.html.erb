@@ -1,6 +1,6 @@
-<center>
+
 	<div class="jumbotron jumbotron-fluid">
-	<h2><%= garden.name %></h2>
+	<h2> <center> <%= garden.name %></center></h2>
 <% if garden.plants.empty? %>
 	<h3> No plants in this garden. Find something you would like to grow and add them to keep track of what you have planted </h3>
 <% else %>
@@ -12,10 +12,10 @@
 			<img class="card-img-top"<%= image_tag(plant.image, height:'200', width: '150') %>
 			<div class="card-body">
 				<div class="name">
-					<h2><%= link_to plant.name.capitalize, search_details_path(plant.name)%></h2>
+					<h4> <center>  <%= link_to plant.name.capitalize, search_details_path(plant.name)%></center>  </h4>
 				</div>
 				<% if !plant.description.nil? %>
-				<div class="description">
+				<div class="description text-justify">
 					<p class="card-text"><%= plant.description[0..150] + "..." %></p>
 				</div>
 				<% else %>
@@ -30,4 +30,4 @@
 </div>
 <% end %>
 </div>
-</center>
+

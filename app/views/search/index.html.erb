@@ -1,7 +1,9 @@
 
-<center>
+
+<br> <br> <br> <br> <br>
+
 <section class='plant_info'>
-  <div class="container-1">
+  <div class="container-1  justify-content-center">
     <% plants.map do |plant| %>
     <div class="cards">
       <div class="cards__item">
@@ -11,10 +13,10 @@
         </div>
         <div class="card-body">
           <div class="name">
-            <h2><%= link_to plant.name.capitalize, search_details_path(plant.name)%></h2>
+            <h4> <center><%= link_to plant.name.capitalize, search_details_path(plant.name)%></center></h4>
           </div>
           <% if !plant.description.nil? %>
-          <div class="description">
+          <div class="description text-justify">
             <p class="card-text"><%= plant.description[0..150] + "..." %></p>
           </div>
           <% else %>
@@ -27,4 +29,4 @@
     <% end %>
   </div>
 </section>
-</center>
+

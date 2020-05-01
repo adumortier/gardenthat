@@ -1,0 +1,58 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+ :root {
+   margin: 3px;
+ }
+#flash-messages-section{
+ position: absolute;
+ top: 56px;
+ z-index: 9999;
+ width: 100%;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), image-url("main_background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 100px;
+  position: relative;
+}
+
+.hero-text-style {
+  color: rgb(255, 255, 255);
+  font-size: 70px;
+}
+
+#show_bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), asset-data-url("main_background.png");
+  width: 100%;
+  height: 75%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
+#show_bg_profile {
+  background-image: asset-data-url("main_background.png");
+  width: 100%;
+  height: 75%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}

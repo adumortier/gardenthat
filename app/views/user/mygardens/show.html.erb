@@ -1,7 +1,7 @@
 
 <center>
   <div class="jumbotron">
-    <h4>Which of Your Garden's Would You Like to Add This Plant To? </h4>
+    <h4>Select a garden for this plant </h4>
     <% current_user.gardens.each do |garden| %>
     <hr class="my-4">
     <%= link_to garden.name, user_mygardens_plants_path(garden.id, @plant.id), method: :post, class: "btn btn-success" %>
