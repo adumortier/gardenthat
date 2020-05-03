@@ -22,6 +22,7 @@ GardenThat is an application meant for any gardener. Search a selection of fruit
 * [Getting Started](#getting-started)
   * [Installation](#installation)
   * [Testing](#testing)
+ * [Microservices](#microservices)
   * [Notification Microservice Access Points](#notification-microservice-access-points)
   * [Plant Microservice Access Points](#plant-microservice-access-points)
 * [Usage](#usage)
@@ -106,6 +107,9 @@ bundle install rspec
 ```sh
 bundle exec rspec
 ```
+
+## Microservices
+
 ### Notification Microservice Access Points 
 
 Retrieve the events from the GardenThatApp calendar:
