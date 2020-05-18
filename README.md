@@ -67,7 +67,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/adumortier.git
+git clone https://github.com/adumortier/gardenthat.git
 ```
 2. Install the Gem File
 ```sh
